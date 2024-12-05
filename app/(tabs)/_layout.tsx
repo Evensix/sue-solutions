@@ -1,45 +1,79 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
+import { Tabs } from "expo-router";
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { HapticTab } from "@/components/HapticTab";
+import TabBarBackground from "@/components/ui/TabBarBackground";
+import { Colors } from "@/constants/Colors";
+import { useColorScheme } from "@/hooks/useColorScheme";
+import { FormProvider } from "@/hooks/useFormProvider";
+import { Platform, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+    <View style={{ flex: 1 }}>
+      <SafeAreaView>
+        <View
+          style={{
+            backgroundColor: "white",
+            padding: 10,
+            paddingInline: 40,
+            maxHeight: "5rem",
+            borderBottomColor: "black",
+            borderBottomWidth: 1,
+          }}
+        >
+          <Text> Add Child </Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            {" "}
+            Chole Alster{" "}
+          </Text>
+        </View>
+      </SafeAreaView>
+
+      <Tabs
+        screenOptions={{
+          tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+          tabBarLabelStyle: { color: "black" },
+          tabBarIcon: () => null,
+          headerShown: false,
+          tabBarButton: HapticTab,
+          tabBarBackground: TabBarBackground,
+          tabBarPosition: "left",
+          tabBarStyle: Platform.select({
+            ios: {
+              // Use a transparent background on iOS to show the blur effect
+              position: "absolute",
+            },
+            default: {},
+          }),
         }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
-    </Tabs>
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "1. Personal Info",
+          }}
+        />
+        <Tabs.Screen
+          name="formTwo"
+          options={{
+            title: "2. Care History",
+          }}
+        />
+        <Tabs.Screen
+          name="formThree"
+          options={{
+            title: "3. Contact Details",
+          }}
+        />
+        <Tabs.Screen
+          name="formFour"
+          options={{
+            title: "4. Appearance",
+          }}
+        />
+      </Tabs>
+    </View>
   );
 }

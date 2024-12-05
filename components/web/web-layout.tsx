@@ -1,11 +1,12 @@
-import "@/global.css";
+import "@/styles/global.css";
 
+import { DOMRouterProvider } from "@/lib/router-with-dom";
 import { Header, SideNavigationBar } from "@/components/web/web-nav";
-// import { DOMRouterProvider } from "@/lib/router-with-dom";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import React from "react";
 
+import { StyleNoSelect } from "../NoSelect";
 import { IS_DOM } from "expo/dom";
-import { DOMRouterProvider } from "@/app/lib/router-with-dom";
 
 export function ShadLayoutFull({
   navigate,
@@ -18,7 +19,9 @@ export function ShadLayoutFull({
 }) {
   return (
     <>
+      {!select && <StyleNoSelect />}
       <DOMRouterProvider value={{ navigate }}>
+        <TooltipProvider>
           <div className="flex min-h-screen w-full flex-col bg-[#F2F2F7] pb-10">
             {/* <SideNavigationBar /> */}
             {!IS_DOM && <SideNavigationBar />}
@@ -29,6 +32,7 @@ export function ShadLayoutFull({
               {children}
             </div>
           </div>
+        </TooltipProvider>
       </DOMRouterProvider>
     </>
   );
