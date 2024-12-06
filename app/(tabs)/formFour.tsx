@@ -1,5 +1,5 @@
 
-import PageFour from '@/components/web/page-four';
+import PageFour from '~/components/domPages/page-four';
 import * as Camera from "expo-camera";
 import * as Haptics from "expo-haptics";
 import { router } from "expo-router";

@@ -1,10 +1,9 @@
 import { Tabs } from "expo-router";
 
-import { HapticTab } from "@/components/HapticTab";
-import TabBarBackground from "@/components/ui/TabBarBackground";
-import { Colors } from "@/constants/Colors";
-import { useColorScheme } from "@/hooks/useColorScheme";
-import { FormProvider } from "@/hooks/useFormProvider";
+import { HapticTab } from "~/components/HapticTab";
+import { Colors } from "~/constants/Colors";
+import { useColorScheme } from "~/hooks/useColorScheme";
+import { FormProvider } from "~/hooks/useFormProvider";
 import { Platform, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -38,7 +37,6 @@ export default function TabLayout() {
           tabBarIcon: () => null,
           headerShown: false,
           tabBarButton: HapticTab,
-          tabBarBackground: TabBarBackground,
           tabBarPosition: "left",
           tabBarStyle: Platform.select({
             ios: {

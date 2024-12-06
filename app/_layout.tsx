@@ -10,8 +10,8 @@ import {
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { Slot } from "expo-router";
-import { useColorScheme } from "@/hooks/useColorScheme";
-import { FormProvider } from "@/hooks/useFormProvider";
+import { useColorScheme } from "~/hooks/useColorScheme";
+import { FormProvider } from "~/hooks/useFormProvider";
 import "react-native-reanimated";
 import { View } from "react-native";
 
@@ -23,7 +23,7 @@ const storybookEnabled = process.env.EXPO_PUBLIC_STORYBOOK_ENABLED === "true";
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [fontsLoaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    JakartaSans: require("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf"),
   });
 
   useEffect(() => {
@@ -41,7 +41,9 @@ export default function RootLayout() {
     const StorybookUI = require("../.storybook/native").default;
     return (
       <View style={{ flex: 1 }}>
-        <StorybookUI />
+         <SafeAreaView style={{ flex: 1 }}>
+          <StorybookUI />
+         </SafeAreaView>
       </View>
     );
   }

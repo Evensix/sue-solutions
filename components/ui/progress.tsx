@@ -1,26 +1,85 @@
+"use client"
+
 import * as React from "react"
-import * as ProgressPrimitive from "@radix-ui/react-progress"
+import {
+  ProgressBar as AriaProgressBar,
+  ProgressBarProps as AriaProgressBarProps,
+  composeRenderProps,
+} from "react-aria-components"
 
 import { cn } from "@/lib/utils"
 
-const Progress = React.forwardRef<
-  React.ElementRef<typeof ProgressPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
->(({ className, value, ...props }, ref) => (
-  <ProgressPrimitive.Root
-    ref={ref}
-    className={cn(
-      "relative h-2 w-full overflow-hidden rounded-full bg-primary/20",
-      className
+import { Label, labelVariants } from "./field"
+
+interface ProgressProps extends AriaProgressBarProps {
+  barClassName?: string
+  fillClassName?: string
+}
+
+const Progress = ({
+  className,
+  barClassName,
+  fillClassName,
+  children,
+  ...props
+}: ProgressProps) => (
+  <AriaProgressBar
+    className={composeRenderProps(className, (className) =>
+      cn("w-full", className)
     )}
     {...props}
   >
-    <ProgressPrimitive.Indicator
-      className="h-full w-full flex-1 bg-primary transition-all"
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-    />
-  </ProgressPrimitive.Root>
-))
-Progress.displayName = ProgressPrimitive.Root.displayName
+    {composeRenderProps(children, (children, renderProps) => (
+      <>
+        {children}
+        <div
+          className={cn(
+            "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
+            barClassName
+          )}
+        >
+          <div
+            className={cn(
+              "size-full flex-1 bg-primary transition-all",
+              fillClassName
+            )}
+            style={{
+              transform: `translateX(-${100 - (renderProps.percentage || 0)}%)`,
+            }}
+          />
+        </div>
+      </>
+    ))}
+  </AriaProgressBar>
+)
 
-export { Progress }
+interface JollyProgressBarProps extends ProgressProps {
+  label?: string
+  showValue?: boolean
+}
+
+function JollyProgressBar({
+  label,
+  className,
+  showValue = true,
+  ...props
+}: JollyProgressBarProps) {
+  return (
+    <Progress
+      className={composeRenderProps(className, (className) =>
+        cn("group flex flex-col gap-2", className)
+      )}
+      {...props}
+    >
+      {({ valueText }) => (
+        <div className="flex w-full justify-between">
+          <Label>{label}</Label>
+          {showValue && <span className={labelVariants()}>{valueText}</span>}
+        </div>
+      )}
+    </Progress>
+  )
+}
+
+export { Progress, JollyProgressBar }
+export type { ProgressProps, JollyProgressBarProps }

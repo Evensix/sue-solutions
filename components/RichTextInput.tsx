@@ -1,7 +1,6 @@
 "use dom";
 
 import { useRef, useState } from "react";
-import { IconSymbol } from "./ui/IconSymbol";
 
 interface RichTextInputProps {
   label: string;
@@ -29,7 +28,7 @@ export const RichTextInput = ({
       {hint && <p>{hint}</p>}
       <textarea
         value={value}
-        className="flex flex-row w-fit w-full border rounded-xl bg-white h-[100px]"
+        className="flex flex-row w-fit border rounded-xl bg-white h-[100px]"
       />
       {(isExampleOpen) && example && (
         <div onClick={() => setIsExampleOpen(!isExampleOpen)}>

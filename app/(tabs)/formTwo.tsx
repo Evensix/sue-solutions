@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import PageTwo from '@/components/web/page-two';
+import PageTwo from '~/components/domPages/page-two';
 import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
 

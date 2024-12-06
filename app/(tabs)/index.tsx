@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import PageOne from '@/components/web/page-one';
+import PageOne from '~/components/domPages/page-one';
 import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
 export default function HomeScreen() {

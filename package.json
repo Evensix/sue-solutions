@@ -1,13 +1,15 @@
 {
-  "name": "sueformsscratcb",
+  "name": "suesolutions",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
     "start": "sb-rn-get-stories --config-path .storybook/native && expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+  
     "web": "EXPO_PUBLIC_STORYBOOK_ENABLED=false expo start --web",
-    "sbweb": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start --web",
+    "websb": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start --web",
+    "dev": "EXPO_PUBLIC_STORYBOOK_ENABLED=false expo start ",
+    "devsb": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start",
+  
     "storybook-generate": "sb-rn-get-stories",
     "storybook-watch": "sb-rn-watcher",
     "storybook:web": "start-storybook --config-dir .storybook/web -p 6006",
@@ -63,6 +65,7 @@
     "nativewind": "^4.1.23",
     "postcss": "^8.4.49",
     "react": "18.3.1",
+    "react-aria-components": "^1.5.0",
     "react-dom": "18.3.1",
     "react-hook-form": "^7.53.2",
     "react-native": "0.76.2",

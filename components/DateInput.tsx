@@ -1,7 +1,5 @@
 "use dom"
 
-import { useRef, useState } from "react";
-import { IconSymbol } from "./ui/IconSymbol";
 
 interface DropDownInputProps {
     label: string;

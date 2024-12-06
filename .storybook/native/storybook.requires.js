@@ -49,8 +49,8 @@ try {
 
 const getStories = () => {
   return {
-    "./../../components/Button/Button.stories.tsx": require("../../components/Button/Button.stories.tsx"),
-    "./../../components/WebButton/WebButton.stories.tsx": require("../../components/WebButton/WebButton.stories.tsx"),
+    "./../../components/InputField/InputField.stories.tsx": require("../../components/InputField/InputField.stories.tsx"),
+    "./../../components/InputWrapper/InputWrapper.stories.tsx": require("../../components/InputWrapper/InputWrapper.stories.tsx"),
   };
 };
 

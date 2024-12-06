@@ -1,6 +1,6 @@
 import * as Notifications from "expo-notifications";
 
-import PageThree from "@/components/web/page-three";
+import PageThree from "~/components/domPages/page-three";
 import { Button } from "@react-navigation/elements";
 import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
