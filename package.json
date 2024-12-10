@@ -38,6 +38,7 @@
     "@react-navigation/bottom-tabs": "^7.0.0",
     "@react-navigation/elements": "^2.1.0",
     "@react-navigation/native": "^7.0.0",
+    "@storybook/react-webpack5": "^8.4.7",
     "autoprefixer": "^10.4.20",
     "babel-transformer": "link:@expo/metro-config/babel-transformer",
     "class-variance-authority": "^0.7.0",
@@ -83,6 +84,9 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "@babel/plugin-transform-class-properties": "^7.25.9",
+    "@babel/plugin-transform-private-methods": "^7.25.9",
+    "@babel/plugin-transform-private-property-in-object": "^7.25.9",
     "@react-native-async-storage/async-storage": "^1.19.0",
     "@react-native-community/cli": "latest",
     "@react-native-community/datetimepicker": "^7.4.0",

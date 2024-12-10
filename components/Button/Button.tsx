@@ -32,7 +32,7 @@ const buttonVariants = cva(
         
           "secondary":
           " bg-button-background-secondary text-button-text-secondary border border-button-text-secondary-outline "+ 
-          "data-[pressed]:bg-button-background-secondary "+
+          "data-[pressed]:bg-button-background-secondary data-[pressed]: "+
           "data-[hovered]:bg-button-background-secondary-hover data-[hovered]:text-button-text-secondary-hover "+
           "data-[disabled]:text-button-text-secondary-disabled data-[disabled]:bg-button-background-secondary-disabled",
         
