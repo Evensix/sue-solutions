@@ -8,17 +8,15 @@ import {
   clearDecorators,
 } from "@storybook/react-native";
 
-
 global.STORIES = [
   {
     titlePrefix: "",
-    directory: "../../components",  // Updated to ../../components
-    files: "**/*.stories.?(ts|tsx|js|jsx)",  // Look for all files ending in .stories.ts, .stories.tsx, .stories.js, or .stories.jsx
+    directory: "./components",
+    files: "**/*.stories.@(js|jsx|ts|tsx)",
     importPathMatcher:
-      "^\\.[\\\\/](?:components(?:\\/[^\\/]+)*(?:\\/|$))[^/]*?\\.stories\\.(?:ts|tsx|js|jsx)$",  // Adjusted matcher for ../../components
+      "^\\.[\\\\/](?:components(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|ts|tsx))$",
   },
 ];
-
 
 import "@storybook/addon-ondevice-controls/register";
 import "@storybook/addon-ondevice-actions/register";
@@ -49,12 +47,12 @@ try {
 
 const getStories = () => {
   return {
-    "./../../components/InputField/InputField.stories.tsx": require("../../components/InputField/InputField.stories.tsx"),
-    "./../../components/InputWrapper/InputWrapper.stories.tsx": require("../../components/InputWrapper/InputWrapper.stories.tsx"),
-    "./../../util/components/stories/Colours.stories.tsx": require("../../components/stories/Colours.stories.tsx"),
-    "./../../util/components/Button/Button.stories.tsx": require("../../components/Button/Button.stories.tsx"),
+    "./components/Button/Button.stories.tsx": require("../../components/Button/Button.stories.tsx"),
+    "./components/InputArray/InputField.stories.tsx": require("../../components/InputArray/InputField.stories.tsx"),
+    "./components/InputField/InputField.stories.tsx": require("../../components/InputField/InputField.stories.tsx"),
+    "./components/InputWrapper/InputWrapper.stories.tsx": require("../../components/InputWrapper/InputWrapper.stories.tsx"),
+    "./components/stories/Colours.stories.tsx": require("../../components/stories/Colours.stories.tsx"),
   };
 };
-
 
 configure(getStories, module, false);
