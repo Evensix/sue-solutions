@@ -4,12 +4,10 @@
   "version": "1.0.0",
   "scripts": {
     "start": "sb-rn-get-stories --config-path .storybook/native && expo start",
-  
     "web": "EXPO_PUBLIC_STORYBOOK_ENABLED=false expo start --web",
     "websb": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start --web",
     "dev": "EXPO_PUBLIC_STORYBOOK_ENABLED=false expo start ",
     "devsb": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start",
-  
     "storybook-generate": "sb-rn-get-stories",
     "storybook-watch": "sb-rn-watcher",
     "storybook:web": "start-storybook --config-dir .storybook/web -p 6006",
@@ -77,7 +75,7 @@
     "react-native-web": "~0.19.13",
     "react-native-webview": "13.12.4",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^3.4.16",
     "tailwindcss-animate": "^1.0.7",
     "three": "0.164.1",
     "yup": "^1.4.0"

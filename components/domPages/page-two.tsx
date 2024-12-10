@@ -49,10 +49,10 @@ export default function PageTwo({
     // updateFormData("careHistory", data);
   };
   return (
-    <WebLayout>
+    <WebLayout navigate={navigate}>
       <div className=" bg-whiteflex-1 flex-col gap-4 form-style">
         <h2>Care History</h2>
-        <FormProvider>
+        <FormProvider >
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-4 max-w-[15rem]"

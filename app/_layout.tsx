@@ -15,6 +15,7 @@ import { FormProvider } from "~/hooks/useFormProvider";
 import "react-native-reanimated";
 import { View } from "react-native";
 
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
