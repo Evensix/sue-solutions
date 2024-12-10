@@ -69,7 +69,7 @@ interface ButtonDecoration {
   suffix?: React.ReactNode;
 }
 
-interface ButtonProps
+export interface ButtonProps
   extends AriaButtonProps,
     VariantProps<typeof buttonVariants>,
     ButtonDecoration {}
@@ -100,5 +100,4 @@ const Button = ({ className, variant, size, prefix, suffix, children, ...props }
   );
 };
 
-export default { Button, buttonVariants };
-export type { ButtonProps };
+export default  Button ;

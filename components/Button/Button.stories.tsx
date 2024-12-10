@@ -1,5 +1,5 @@
 import { ChevronLeftCircle, ChevronRightCircle, Icon } from "lucide-react";
-import { Button, ButtonProps } from "./Button";
+import Button, {  ButtonProps } from "./Button";
 
 export default {
 	title: 'atoms/Buttons',

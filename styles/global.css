@@ -169,7 +169,7 @@
 	[data-theme='error'] {
         
         --hsla-button-background-primary: var(--hsla-error-600);
-		--hsla-button-background-primary-hover: var(--hsla-error-700);
+		--hsla-button-background-primary-hover: var(--hsla-error-800);
 		--hsla-button-background-primary-disabled: var(--hsla-black-alpha-8);
         --hsla-button-text-primary: var(--hsla-white);
 		--hsla-button-text-primary-hover: var(--hsla-white);
