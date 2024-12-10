@@ -9,7 +9,7 @@ export type InputWrapperProps = {
   inputArray: InputFieldProps[];
 };
 
-export const InputArray: React.FC<InputWrapperProps> = ({
+const InputArray: React.FC<InputWrapperProps> = ({
   inputArray
 }) => {
   return (
@@ -23,3 +23,5 @@ export const InputArray: React.FC<InputWrapperProps> = ({
     </div>
   );
 };
+
+export default InputArray;

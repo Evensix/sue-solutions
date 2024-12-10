@@ -11,7 +11,7 @@ example?:string
 children?:React.ReactNode
 };
 
-export const InputWrapper: React.FC<InputWrapperProps> = ({
+const InputWrapper: React.FC<InputWrapperProps> = ({
   children,
   label,
   hint,
@@ -36,3 +36,6 @@ export const InputWrapper: React.FC<InputWrapperProps> = ({
 
   );
 };
+
+
+export default InputWrapper;

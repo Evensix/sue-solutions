@@ -100,5 +100,5 @@ const Button = ({ className, variant, size, prefix, suffix, children, ...props }
   );
 };
 
-export { Button, buttonVariants };
+export default { Button, buttonVariants };
 export type { ButtonProps };

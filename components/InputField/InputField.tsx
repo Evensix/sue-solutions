@@ -12,7 +12,7 @@ export type InputFieldProps = {
   disabled?: boolean;
 };
 
-export const InputField: React.FC<InputFieldProps> = ({
+const InputField: React.FC<InputFieldProps> = ({
   inputProps,
   className,
   leftMembers,
@@ -54,3 +54,5 @@ const WrapMembers = (members: React.ReactNode[]) => {
     </div>
   );
 };
+
+export default InputField;
