@@ -11,7 +11,8 @@
     "storybook-generate": "sb-rn-get-stories",
     "storybook-watch": "sb-rn-watcher",
     "storybook:web": "start-storybook --config-dir .storybook/web -p 6006",
-    "build-storybook": "build-storybook --config-dir .storybook/web"
+    "build-storybook": "build-storybook --config-dir .storybook/web",
+    "build-storybook-rn": "sb-rn-get-stories --config-path .storybook/native"
   },
   "jest": {
     "preset": "jest-expo"
