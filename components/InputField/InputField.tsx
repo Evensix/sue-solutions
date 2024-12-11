@@ -22,16 +22,17 @@ const InputField: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <div
-      className={`flex focus-within:border-black border-[1px] gap-4  border-rounded ${
-        disabled ? "bg-gray-200" : ""
+      className={`flex focus-within:border-black border-[1px] px-2 gap-2 border-rounded-md ${
+        disabled ? "bg-" : ""
       }`}
     >
       {leftMembers && WrapMembers([...leftMembers])}
       <AriaInput
         name={name}
+        autoComplete="off"
         spellCheck={false}
         disabled={disabled}
-        className="focus:outline-none px-4"
+        className="focus:outline-none  px-2"
         {...inputProps}
       ></AriaInput>
       {rightMembers && WrapMembers([...rightMembers])}

@@ -34,6 +34,12 @@ module.exports = {
       background: "hsl(var(--background))",
       foreground: "hsl(var(--foreground))",
 
+      input : {
+        background: "hsl(var(--hsla-white))",
+        "background-hover": "hsl(var(--hsla-black-alpha-25))",
+        "background-disabled": "hsl(var(--hsla-black-alpha-25))",
+      },
+
       
       button: {
         "background-primary": "var(--hsla-button-background-primary)",

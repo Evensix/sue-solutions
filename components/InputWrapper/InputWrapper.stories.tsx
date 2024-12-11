@@ -31,7 +31,7 @@ export const Basic: Story = {
     example: "Example text if needed",
     label: "Label",
     hint: "Hint",
-    children: '|_____________|',
+    children: <InputField name="basic"/>,
   },
 };
 

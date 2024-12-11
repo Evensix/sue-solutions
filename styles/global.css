@@ -4,6 +4,7 @@
 
 @layer base {
     :root {
+		--font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
 
 		--radius : 0.5rem;
 		--container-padding: 1.25rem;
@@ -126,6 +127,7 @@
 
 		@apply md:[--section-spacing:4rem];
 	}
+
 	
     .brand,
 	[data-theme='brand'] { 
@@ -212,7 +214,6 @@
 
 
 
-
     html {
         font-family: "Inter", sans-serif;
     }
@@ -265,8 +266,8 @@
         }
     } */
 
-	.modal-typography {
-		@apply font-sans body-18
+	/* .modal-typography {
+		@apply font-plus-jakarta-sans body-18
 		[&>*+*]:mt-6
 		[&>:first-child]:!mt-0
 		[&>:last-child]:!mb-0
@@ -313,58 +314,58 @@
 		[&_blockquote]:quote-24
 		[&_blockquote]:text-center
 		[&_blockquote]:my-12;
-	}
+	} */
 
 	.heading-80 {
-		@apply font-sans text-heading-80;
+		@apply font-plus-jakarta-sans text-heading-80;
 	}
 
-	.heading-72 {
-		@apply font-sans text-heading-72;
+	/* .heading-72 {
+		@apply font-plus-jakarta-sans text-heading-72;
 	}
 
 	.heading-64 {
-		@apply font-sans text-heading-64;
+		@apply font-plus-jakarta-sans text-heading-64;
 	}
 
 	.heading-56 {
-		@apply font-sans text-heading-56;
+		@apply font-plus-jakarta-sans text-heading-56;
 	}
 
 	.heading-48 {
-		@apply font-sans text-heading-48;
+		@apply font-plus-jakarta-sans text-heading-48;
 	}
 
 	.heading-40 {
-		@apply font-sans text-heading-40;
+		@apply font-plus-jakarta-sans text-heading-40;
 	}
 
 	.heading-32 {
-		@apply font-sans text-heading-32;
+		@apply font-plus-jakarta-sans text-heading-32;
 	}
 
 	.heading-28 {
-		@apply font-sans text-heading-28;
+		@apply font-plus-jakarta-sans text-heading-28;
 	}
 
 	.heading-24 {
-		@apply font-sans text-heading-24;
+		@apply font-plus-jakarta-sans text-heading-24;
 	}
 
 	.heading-20 {
-		@apply font-sans text-heading-20;
+		@apply font-plus-jakarta-sans text-heading-20;
 	}
 
 	.heading-18 {
-		@apply font-sans text-heading-18;
+		@apply font-plus-jakarta-sans text-heading-18;
 	}
 
 	.heading-16 {
-		@apply font-sans text-heading-16;
+		@apply font-plus-jakarta-sans text-heading-16;
 	}
 
 	.heading-14 {
-		@apply font-sans text-heading-14;
+		@apply font-plus-jakarta-sans text-heading-14;
 	}
 
 	.body-18 {
@@ -404,19 +405,19 @@
 	}
 
 	.pin-16 {
-		@apply font-sans text-pin-16;
+		@apply font-plus-jakarta-sans text-pin-16;
 	}
 
 	.pin-14 {
-		@apply font-sans text-pin-14;
+		@apply font-plus-jakarta-sans text-pin-14;
 	}
 
 	.pin-10 {
-		@apply font-sans text-pin-10;
+		@apply font-plus-jakarta-sans text-pin-10;
 	}
 
 	.button-16 {
-		@apply font-sans text-button-16;
+		@apply font-plus-jakarta-sans text-button-16;
 	}
 
 	.quote-32 {
@@ -425,7 +426,7 @@
 
 	.quote-24 {
 		@apply font-mono text-quote-24;
-	}
+	} */
 
 
     
