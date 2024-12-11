@@ -10,6 +10,26 @@ module.exports = {
   },
   prefix: "",
   theme: {
+    extend: {
+      fontFamily: {
+        'plus-jakarta-sans': ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      fontSize: {
+        'text-56': ['3.5rem', { lineHeight: '4.25rem'} ],
+        'text-48': ['3rem', { lineHeight: '3.5rem'} ],
+        'text-40': ['2.5rem', { lineHeight: '3rem'} ],
+        'text-32': ['2rem', { lineHeight: '2.5rem'} ],
+        'text-24': ['1.5rem', { lineHeight: '2rem'} ],
+        'text-20': ['1.25rem', { lineHeight: '1.875rem'} ],
+        'text-18': ['1.125rem', { lineHeight: '1.75rem'} ],
+        'text-16': ['1rem', { lineHeight: '1.5rem'} ],
+        'text-14': ['0.875rem', { lineHeight: '1.25rem'} ],
+        'text-12': ['0.75rem', { lineHeight: '1.125rem'} ],
+        'text-11': ['0.68rem', { lineHeight: '1rem'} ],
+        'text-10': ['0.625rem', { lineHeight: '1rem'} ],
+      },
+    },
+
     screens: {
       xs: "360px",
       sm: "480px",
