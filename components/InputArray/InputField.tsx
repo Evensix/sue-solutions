@@ -1,7 +1,6 @@
 "use dom";
 
 import React from "react";
-import { Icon } from "lucide-react";
 import InputField, { InputFieldProps } from "../InputField/InputField";
 
 export type InputWrapperProps = {

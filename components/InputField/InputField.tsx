@@ -22,24 +22,25 @@ const InputField: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <div
-      className={`flex focus-within:border-black border-[1px] gap-4 px-4 border-rounded ${
+      className={`flex focus-within:border-black border-[1px] gap-4  border-rounded ${
         disabled ? "bg-gray-200" : ""
       }`}
     >
-      {leftMembers && WrapMembers(["", ...leftMembers])}
+      {leftMembers && WrapMembers([...leftMembers])}
       <AriaInput
         name={name}
         spellCheck={false}
         disabled={disabled}
-        className="focus:outline-none"
+        className="focus:outline-none px-4"
         {...inputProps}
       ></AriaInput>
-      {rightMembers && WrapMembers(["", ...rightMembers])}
+      {rightMembers && WrapMembers([...rightMembers])}
     </div>
   );
 };
 
 const WrapMembers = (members: React.ReactNode[]) => {
+  if(!members.length) return null
   return (
     <div className="flex column bg-white ">
       {members.map((member, index) => {

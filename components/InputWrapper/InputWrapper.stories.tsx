@@ -1,29 +1,29 @@
 import React from "react";
 import { View } from "react-native";
-import { Meta, StoryObj } from "@storybook/react-native";
-import { InputWrapper, InputWrapperProps } from "./InputWrapper";
-import { InputField } from "../InputField/InputField";
+import InputWrapper, {  InputWrapperProps } from "./InputWrapper";
+import InputField from "../InputField/InputField";
 
-const meta: Meta<InputWrapperProps> = {
-  title: "WrappedInput",
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+
+
+const meta = {
+  title: 'atom/InputWrapper',
   component: InputWrapper,
-  argTypes: {
-   },
-
-  decorators: [
-    (Story) => (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <InputWrapper label="Label" error="Error" example="Example text if needed" hint="Hint">
-        <InputField/>
-        </InputWrapper>
-      </View>
-    ),
-  ],
-};
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  tags: ['autodocs'],
+  parameters: {
+    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered',
+  },
+  args: {
+  },
+} satisfies Meta<typeof InputWrapper>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-type Story = StoryObj<InputWrapperProps>;
+
 
 export const Basic: Story = {
   storyName: "Basic",

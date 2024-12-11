@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
-    "./app/**/*.{ts,tsx, html, js, jsx}",
-    "./components/**/*.{ts,tsx,html, js, jsx}",
+    "./stories/**/*.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
   ],
   future: {
     hoverOnlyWhenSupported: true,

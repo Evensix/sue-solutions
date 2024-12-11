@@ -74,7 +74,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants>,
     ButtonDecoration {}
 
-const Button = ({ className, variant, size, prefix, suffix, children, ...props }: ButtonProps) => {
+const Button:React.FC<ButtonProps> = ({ className, variant, size, prefix, suffix, children, ...props }: ButtonProps) => {
   return ( 
       <AriaButton
         className={composeRenderProps(className, (className) =>

@@ -1,10 +1,23 @@
-import { ChevronLeftCircle, ChevronRightCircle, Icon } from "lucide-react";
+import type { Meta, StoryObj } from '@storybook/react';
+
 import Button, {  ButtonProps } from "./Button";
 
-export default {
-	title: 'atoms/Buttons',
-};
-
+const meta = {
+	title: 'atom/Button',
+	component: Button,
+	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+	tags: ['autodocs'],
+	parameters: {
+	  // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
+	  layout: 'fullscreen',
+	},
+	args: {
+	},
+  } satisfies Meta<typeof Button>;
+  
+  export default meta;
+  type Story = StoryObj<typeof meta>;
+  
 interface ItemProps {
 	colour: string;
 	name: string;
@@ -24,9 +37,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Primary</strong>
 				
 				<Button  variant={"primary"} >Button</Button>
-				<Button  variant={"primary"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"primary"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"primary"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"primary"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"primary"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"primary"} >Button</Button>
 				
 
@@ -36,9 +49,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Secondary</strong>
 				
 				<Button  variant={"secondary"} >Button</Button>
-				<Button  variant={"secondary"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"secondary"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"secondary"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"secondary"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"secondary"} >Button</Button>
 				
 			</div>
@@ -48,9 +61,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Tertiary</strong>
 				
 				<Button  variant={"tertiary"} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"tertiary"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"tertiary"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"tertiary"} >Button</Button>
 				
 			</div>
@@ -59,9 +72,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Link</strong>
 				
 				<Button  variant={"link"} >Button</Button>
-				<Button  variant={"link"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"link"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"link"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"link"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"link"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"link"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"link"} >Button</Button>
 				
 			</div>
@@ -76,9 +89,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Primary</strong>
 				
 				<Button  variant={"primary"} >Button</Button>
-				<Button  variant={"primary"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"primary"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"primary"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"primary"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"primary"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"primary"} >Button</Button>
 				
 
@@ -88,9 +101,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Secondary</strong>
 				
 				<Button  variant={"secondary"} >Button</Button>
-				<Button  variant={"secondary"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"secondary"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"secondary"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"secondary"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"secondary"} >Button</Button>
 				
 			</div>
@@ -100,9 +113,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Tertiary</strong>
 				
 				<Button  variant={"tertiary"} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"tertiary"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"tertiary"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"tertiary"} >Button</Button>
 				
 			</div>
@@ -111,9 +124,9 @@ export const ButtonStory = function () {
                 <strong style={{width: "5rem"}}>Link</strong>
 				
 				<Button  variant={"link"} >Button</Button>
-				<Button  variant={"link"} prefix={<ChevronLeftCircle/> } > Button</Button>
-				<Button  variant={"link"} suffix={<ChevronRightCircle/>} >Button</Button>
-				<Button  variant={"link"} prefix={<ChevronLeftCircle/> } suffix={<ChevronRightCircle/>} >Button</Button>
+				<Button  variant={"link"} prefix={<div>O</div> } > Button</Button>
+				<Button  variant={"link"} suffix={<div>O</div>} >Button</Button>
+				<Button  variant={"link"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
 				<Button isDisabled={true}  variant={"link"} >Button</Button>
 				
 			</div>
