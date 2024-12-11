@@ -42,7 +42,8 @@ module.exports = {
         "text-primary": "var(--hsla-button-text-primary) ",
         "text-primary-disabled": "var(--hsla-button-text-primary-disabled) ",
         "text-primary-hover": "var(--hsla-button-text-primary-hover)",
-        "text-primary-outline": "var(--hsla-button-primary-outline) ",
+        "primary-border": "var(--hsla-button-primary-outline) ",
+        "primary-halo": "var(--hsla-button-primary-halo) ",
 
         "background-secondary": "var(--hsla-button-background-secondary)",
         "background-secondary-hover": "var(--hsla-button-background-secondary-hover)",
@@ -50,7 +51,8 @@ module.exports = {
         "text-secondary": "var(--hsla-button-text-secondary) ",
         "text-secondary-disabled": "var(--hsla-button-text-secondary-disabled) ",
         "text-secondary-hover": "var(--hsla-button-text-secondary-hover)",
-        "text-secondary-outline": "var(--hsla-button-secondary-outline)",
+        "secondary-border": "var(--hsla-button-secondary-outline) ",
+        "secondary-halo": "var(--hsla-button-secondary-halo)",
 
         "background-tertiary": "var(--hsla-button-background-tertiary)",
         "background-tertiary-hover": "var(--hsla-button-background-tertiary-hover)",
@@ -58,7 +60,8 @@ module.exports = {
         "text-tertiary": "var(--hsla-button-text-tertiary)",
         "text-tertiary-disabled": "var(--hsla-button-text-tertiary-disabled)",
         "text-tertiary-hover": "var(--hsla-button-text-tertiary-hover)",
-        "text-tertiary-outline": "var(--hsla-button-tertiary-outline)",
+        "tertiary-border": "var(--hsla-button-tertiary-outline) ",
+        "tertiary-halo": "var(--hsla-button-tertiary-halo)",
 
         "background-link": "var(--hsla-button-background-link)",
         "background-link-hover": "var(--hsla-button-background-link-hover)",
@@ -66,7 +69,8 @@ module.exports = {
         "text-link": "var(--hsla-button-text-link)",
         "text-link-disabled": "var(--hsla-button-text-link-disabled)",
         "text-link-hover": "var(--hsla-button-text-link-hover)",
-        "text-link-outline": "var(--hsla-button-link-outline)",
+        "link-border": "var(--hsla-button-link-outline) ",
+        "link-halo": "var(--hsla-button-link-halo)",
       },
 
       primary: {

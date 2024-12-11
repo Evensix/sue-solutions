@@ -25,20 +25,20 @@ const buttonVariants = cva(
     variants: {
       variant: {
         "primary":
-          " bg-button-background-primary text-button-text-primary "+ 
-          "data-[pressed]:bg-button-background-primary "+
+          " bg-button-background-primary text-button-text-primary border-border-button-primary-outline [&>div]:bg-transparent "+ 
+          "data-[pressed]:bg-button-background-primary [&>div]:data-[pressed]:bg-button-primary-halo  "+
           "data-[hovered]:bg-button-background-primary-hover "+
           "data-[disabled]:text-button-text-primary-disabled data-[disabled]:bg-button-background-primary-disabled",
         
           "secondary":
-          " bg-button-background-secondary text-button-text-secondary border border-button-text-secondary-outline "+ 
-          "data-[pressed]:bg-button-background-secondary data-[pressed]: "+
+          " bg-button-background-secondary text-button-text-secondary border border-button-secondary-border "+ 
+          "data-[pressed]:bg-button-background-secondary [&>div]:data-[pressed]:bg-button-secondary-halo "+
           "data-[hovered]:bg-button-background-secondary-hover data-[hovered]:text-button-text-secondary-hover "+
           "data-[disabled]:text-button-text-secondary-disabled data-[disabled]:bg-button-background-secondary-disabled",
         
         "tertiary":
         " bg-button-background-tertiary text-button-text-tertiary "+ 
-        "data-[pressed]:bg-button-background-tertiary "+
+        "data-[pressed]:bg-button-background-tertiary [&>div]:data-[pressed]:bg-button-tertiary-halo "+
         "data-[hovered]:bg-button-background-tertiary-hover data-[hovered]:text-button-text-tertiary-hover "+
         "data-[disabled]:text-button-text-tertiary-disabled data-[disabled]:bg-button-background-tertiary-disabled",
       
@@ -88,7 +88,7 @@ const Button:React.FC<ButtonProps> = ({ className, variant, size, prefix, suffix
         )}
         {...props}
       >
-        <div className="absolute halo -inset-1 rounded-md w-[calc(100%+8px)] h-[calc(100%+8px)] -z-10"/>
+        <div className="absolute -inset-1 rounded-md w-[calc(100%+8px)] h-[calc(100%+8px)] -z-10 transition-colors duration-600"/>
 
         <span className="flex items-center gap-2 ">
           {prefix && <span className="flex-shrink-0">{prefix}</span>}

@@ -137,24 +137,27 @@
         --hsla-button-text-primary: var(--hsla-white);
 		--hsla-button-text-primary-hover: var(--hsla-white);
 		--hsla-button-text-primary-disabled: var(--hsla-black-alpha-25);
-        --hsla-button-primary-outline: var(--hsla-brand-50);
+        --hsla-button-primary-outline: var(--hsla-brand-100);
+        --hsla-button-primary-halo: var(--hsla-brand-100);
         
 
         --hsla-button-background-secondary: var(--hsla-white);
-		--hsla-button-background-secondary-hover: var(--hsla-black-alpha-16);
+		--hsla-button-background-secondary-hover: var(--hsla-black-alpha-8);
 		--hsla-button-background-secondary-disabled: var(--hsla-white);
 		--hsla-button-text-secondary: var(--hsla-brand-950);
 		--hsla-button-text-secondary-hover: var(--hsla-brand-950);
 		--hsla-button-text-secondary-disabled: var(--hsla-black-alpha-25);
         --hsla-button-secondary-outline: var(--hsla-black-alpha-25);
+        --hsla-button-secondary-halo: var(--hsla-black-alpha-25);
         
         --hsla-button-background-tertiary: var(--hsla-white);
-		--hsla-button-background-tertiary-hover: var(--hsla-black-alpha-16);
+		--hsla-button-background-tertiary-hover: var(--hsla-black-alpha-8);
 		--hsla-button-background-tertiary-disabled: var(--hsla-white);
 		--hsla-button-text-tertiary: var(--hsla-brand-950);
-		--hsla-button-text-tertiary-hover: var(--hsla-brand-700);
+		--hsla-button-text-tertiary-hover: var(--hsla-brand-950);
 		--hsla-button-text-tertiary-disabled: var(--hsla-black-alpha-25);
         --hsla-button-tertiary-outline: var(--hsla-white);
+        --hsla-button-tertiary-halo: var(--hsla-black-alpha-8);
 
         --hsla-button-background-link: var(--hsla-white);
 		--hsla-button-background-link-hover: var(--hsla-white);
@@ -163,6 +166,7 @@
 		--hsla-button-text-link-hover: var(--hsla-brand-800);
 		--hsla-button-text-link-disabled: var(--hsla-black-alpha-25);
         --hsla-button-link-outline: var(--hsla-white);
+        --hsla-button-link-halo: var(--hsla-white);
 
     }
 	.error,
@@ -175,6 +179,7 @@
 		--hsla-button-text-primary-hover: var(--hsla-white);
 		--hsla-button-text-primary-disabled: var(--hsla-black-alpha-25);
         --hsla-button-primary-outline: var(--hsla-error-50);
+        --hsla-button-primary-halo: var(--hsla-error-100);
         
 
         --hsla-button-background-secondary: var(--hsla-white);
@@ -184,6 +189,7 @@
 		--hsla-button-text-secondary-hover: var(--hsla-error-800);
 		--hsla-button-text-secondary-disabled: var(--hsla-black-alpha-25);
         --hsla-button-secondary-outline: var(--hsla-error-50);
+        --hsla-button-secondary-halo: var(--hsla-black-alpha-8);
         
         --hsla-button-background-tertiary: var(--hsla-white);
 		--hsla-button-background-tertiary-hover: var(--hsla-error-50);
@@ -192,6 +198,7 @@
 		--hsla-button-text-tertiary-hover: var(--hsla-error-800);
 		--hsla-button-text-tertiary-disabled: var(--hsla-black-alpha-25);
         --hsla-button-tertiary-outline: var(--hsla-white);
+        --hsla-button-tertiary-halo: var(--hsla-black-alpha-8);
 
         --hsla-button-background-link: var(--hsla-white);
 		--hsla-button-background-link-hover: var(--hsla-white);
@@ -199,7 +206,8 @@
 		--hsla-button-text-link: var(--hsla-error-600);
 		--hsla-button-text-link-hover: var(--hsla-error-800);
 		--hsla-button-text-link-disabled: var(--hsla-black-alpha-25);
-        --hsla-button-link-outline: var(--hsla-white)
+        --hsla-button-link-outline: var(--hsla-white);
+        --hsla-button-link-halo: var(--hsla-black-alpha-8);
     }
 
 
