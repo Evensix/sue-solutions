@@ -20,17 +20,17 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
 }) => {
   const [isExampleOpen, setIsExampleOpen] = useState(false);
   return (
-    <div className="flex flex-col">
-      <Label>{label}</Label>
-      {hint && <span>{hint}</span>} 
+    <div className="flex flex-col gap-1">
+      <Label className="semibold-14">{label}</Label>
+      {hint && <span className="regular-14">{hint}</span>} 
       {error && <span>{error}</span>}
       
       {children}
 
       {example &&
         <div className="cursor-pointer" onClick={() => setIsExampleOpen(!isExampleOpen)}>
-        <span> Example  {isExampleOpen ? <span>^</span>: <span>v</span>}</span>
-        <p>{isExampleOpen && example}</p>
+        <span className="regular-14"> Example  {isExampleOpen ? <span>.</span>: <span>.</span>}</span>
+        <p className="regular-14">{isExampleOpen && example}</p>
       </div>}
     </div>
 
@@ -39,3 +39,4 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
 
 
 export default InputWrapper;
+

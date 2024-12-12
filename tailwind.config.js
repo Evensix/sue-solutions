@@ -48,19 +48,19 @@ module.exports = {
       },
     },
     colors: {
-      border: "hsl(var(--border))",
-      input: "hsl(var(--input))",
-      ring: "hsl(var(--ring))",
+
       background: "hsl(var(--background))",
       foreground: "hsl(var(--foreground))",
 
       input : {
-        background: "hsl(var(--hsla-white))",
-        "background-hover": "hsl(var(--hsla-black-alpha-25))",
-        "background-disabled": "hsl(var(--hsla-black-alpha-25))",
+        background: "var(--hsla-white)",
+        border: "var(--hsla-black-alpha-25)",
+        "border-focus": "var(--hsla-black-alpha-50)",
+        prepost: "var(--hsla-black-alpha-50)",
+        "background-hover": "var(--hsla-black-alpha-25)",
+        "background-disabled": "var(--hsla-neutral-grey-100)",
       },
 
-      
       button: {
         "background-primary": "var(--hsla-button-background-primary)",
         "background-primary-hover": "var(--hsla-button-background-primary-hover)",
