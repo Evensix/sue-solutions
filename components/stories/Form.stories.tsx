@@ -1,5 +1,5 @@
 export default {
-	title: 'Base/Form',
+	title: 'Demo/Form',
 };
 import { useForm, FormProvider } from "react-hook-form";
 import { DateInput } from "../DateInput";
