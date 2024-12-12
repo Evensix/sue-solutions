@@ -22,13 +22,13 @@ export const DropDownInput = ({ label,  value }: DropDownInputProps) => {
     return (
         <div className="flex flex-col relative w-full ">
             <button onClick={() => setOpen(!open)} >
-                <div className="flex flex-row w-fit p-2 px-4 border rounded-xl bg-white">
+                <div className="flex border-input-border rounded-md   flex-row w-fit p-2 px-4 border rounded-xl bg-white">
                     + Add
                 </div>
             </button>
             {open && (
-                <div  className="flex flex-col top-[45px] bg-white p-2 absolute border rounded-lg" >
-                    <div className="flex flex-row justify-between border-b mb-2" >
+                <div  className="flex bg-input-background flex-col top-[45px] bg-white p-2 absolute border border-input-border rounded-lg" >
+                    <div className="flex rounded-md flex-row justify-between  mb-2" >
                         <h3>Add</h3>
                         <div onClick={() => setOpen(false)}>
                             x
