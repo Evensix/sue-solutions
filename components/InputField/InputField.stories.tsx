@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import  InputField  from './InputField';
+import { MailOutline } from '@mui/icons-material';
 
 
 const meta = {
@@ -21,33 +22,23 @@ type Story = StoryObj<typeof meta>;
 
 
 export const Basic: Story = {
-  storyName: "Basic",
+  name: "Basic",
   args: {
     name: "basic",
-    inputProps : {}
   },
 };
 
 export const Disabled: Story = {
-  storyName: "Disabled",
+  name: "Disabled",
   args: {
     name: "disabled",
-    inputProps : {"aria-disabled": true},
     disabled: true
   },
 };
 
-export const DisabledTest: Story = {
-  storyName: "DisabledTest",
-  args: {
-    name: "disabled",
-    inputProps : {"aria-disabled": true},
-    disabled: true
-  },
-};
 
 export const All: Story = {
-  storyName: "All",
+  name: "All",
   args: {
     name: "All",
     rightMembers: ['', <div>suffix</div>],
@@ -56,17 +47,15 @@ export const All: Story = {
 };
 
 export const Email: Story = {
-  storyName: "Email",
+  name: "Email",
   args: {
     name: "email",
-    leftMembers: [ '', <div>
-      E
-    </div>],
+    leftMembers: [ '', <MailOutline/> ],
   },
 };
 
 export const Website: Story = {
-  storyName: "Website",
+  name: "Website",
   args: {
     name: "website",
     leftMembers: ['',<div>
@@ -74,5 +63,6 @@ export const Website: Story = {
     </div>],
   },
 };
+
 
 

@@ -1,7 +1,7 @@
 "use dom";
 
 import React, { useState } from "react";
-import { Label } from "react-aria-components";
+import { FieldError, Label } from "../InputUtils/InputUtils";
 
 export type InputWrapperProps = {
 label:string,
@@ -23,8 +23,7 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
     <div className="flex flex-col gap-1">
       <Label className="semibold-14">{label}</Label>
       {hint && <span className="regular-14">{hint}</span>} 
-      {error && <span>{error}</span>}
-      
+      {error && <FieldError>{error}</FieldError> }
       {children}
 
       {example &&

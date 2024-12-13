@@ -1,44 +1,53 @@
 "use dom";
 
 import React from "react";
-import { Input as AriaInput } from "react-aria-components";
+import {
+  Input as AriaInput,
+  InputProps as AriaInputProps,
+} from "react-aria-components"
 
-export type InputFieldProps = {
+export type InputFieldProps =  AriaInputProps & {
   className?: string;
   name: string;
   type?: "text" | "password" | "email" | "number" | "search" | "tel" | "url",
   leftMembers?: React.ReactNode[];
   rightMembers?: React.ReactNode[];
-  inputProps?: React.HTMLAttributes<HTMLInputElement>;
   disabled?: boolean;
 };
 
 const InputField: React.FC<InputFieldProps> = ({
-  inputProps,
   className,
   leftMembers,
   rightMembers,
   disabled,
   name,
-  type
+  type,
+  ...props
 }) => {
   return (
+    // [&>div]:focus-within:bg-button-primary-border
     <div
-      className={` flex border-input-border focus-within:border-input-border-focus border-[1px] px-2 gap-2 rounded-sm
-       ${disabled ? "bg-input-background-disabled" : ""}
+      className={` brand relative flex border-input-border   border-[1px] px-2 gap-2 rounded-sm
+        focus-within:border-input-border-focus  [&>.halo]:focus-within:bg-input-halo-focus 
+       ${disabled ? "[&>.backdrop]:bg-input-background-disabled" : ""}
       `}
     >
-      {leftMembers && WrapMembers([...leftMembers])}
-      <AriaInput
-        type={type}
-        name={name}
-        autoComplete="off"
-        spellCheck={false}
-        disabled={disabled}
-        className="focus:outline-none  px-2"
-        {...inputProps}
-      ></AriaInput>
-      {rightMembers && WrapMembers([...rightMembers])}
+      <div className="absolute backdrop left-0 top-0 rounded-sm w-[100%] h-[100%] bg-white z-10 "/>
+      <div className="absolute -inset-1 halo rounded-md w-[calc(100%+8px)] h-[calc(100%+8px)]  -z-20 "/>
+      <div className="z-20 flex">
+        {leftMembers && WrapMembers([...leftMembers])}
+        <AriaInput
+          type={type}
+          name={name}
+          autoComplete="off"
+          spellCheck={false}
+          disabled={disabled}
+          className="focus:outline-none  px-2"
+          {...props}
+        ></AriaInput>
+        {rightMembers && WrapMembers([...rightMembers])}
+      </div>
+
     </div>
   );
 };
@@ -50,7 +59,7 @@ const WrapMembers = (members: React.ReactNode[]) => {
       {members.map((member, index) => {
         if (member) {
           return (
-            <div className="flex text-input-prepost justify-center items-center [&>*]:flex [&>*]:justify-center [&>*]:items-center  " key={index}>
+            <div className="flex bg-input-background  text-input-prepost justify-center items-center [&>*]:flex [&>*]:justify-center [&>*]:items-center  " key={index}>
               {member}
             </div>
           );

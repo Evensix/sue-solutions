@@ -51,11 +51,14 @@ module.exports = {
 
       background: "hsl(var(--background))",
       foreground: "hsl(var(--foreground))",
-
+      blue: "var(--hsla-button-background-primary)",
+      red: "var(--hsla-error-600)",
+      white: "var(--hsla-white)",
       input : {
         background: "var(--hsla-white)",
         border: "var(--hsla-black-alpha-25)",
         "border-focus": "var(--hsla-black-alpha-50)",
+        "halo-focus": "var( --hsla-brand-250)",
         prepost: "var(--hsla-black-alpha-50)",
         "background-hover": "var(--hsla-black-alpha-25)",
         "background-disabled": "var(--hsla-neutral-grey-100)",

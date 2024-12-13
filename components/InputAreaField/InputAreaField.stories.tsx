@@ -1,15 +1,11 @@
-import React from "react";
-import { View } from "react-native";
-import InputWrapper, {  InputWrapperProps } from "./InputWrapper";
-import InputField from "../InputField/InputField";
-
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import  InputField  from './InputAreaField';
 
 
 const meta = {
-  title: 'molecule/InputWrapper',
-  component: InputWrapper,
+  title: 'atom/InputArea',
+  component: InputField,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
@@ -18,22 +14,16 @@ const meta = {
   },
   args: {
   },
-} satisfies Meta<typeof InputWrapper>;
+} satisfies Meta<typeof InputField>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-
 export const Basic: Story = {
   name: "Basic",
   args: {
-    example: "Example text if needed",
-    label: "Label",
-    hint: "Hint",
-    children: <InputField name="basic"/>,
+    name: "basic",
   },
 };
-
-
 

@@ -1,13 +1,12 @@
-import React from "react";
-import InputArray, {  InputWrapperProps } from "./InputField";
-
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import { JollyComboBox } from './InputCombo';
+
 
 
 const meta = {
-  title: 'atom/InputArray',
-  component: InputArray,
+  title: 'atom/ComboBox',
+  component: JollyComboBox,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
@@ -16,18 +15,20 @@ const meta = {
   },
   args: {
   },
-} satisfies Meta<typeof InputArray>;
+} satisfies Meta<typeof JollyComboBox>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 
 export const Basic: Story = {
-  storyName: "Basic",
+  name: "Basic",
   args: {
-    inputArray: []
+    children:<div>Children</div>
+    
   },
 };
+
 
 
 
