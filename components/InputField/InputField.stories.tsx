@@ -36,6 +36,14 @@ export const Disabled: Story = {
   },
 };
 
+export const Error: Story = {
+  name: "Error",
+  args: {
+    name: "error",
+    "aria-errormessage": "error message"
+  },
+};
+
 
 export const All: Story = {
   name: "All",

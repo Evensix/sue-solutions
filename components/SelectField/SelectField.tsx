@@ -40,6 +40,7 @@ import {
 import { ListBoxCollection, ListBoxHeader, ListBoxItem, ListBoxSection } from "../ListBox/ListBox";
 import { Label } from "../InputUtils/InputUtils";
 import { Popover } from "../Popover/Popover";
+import { cn } from "@/lib/utils";
 
 export type InputFieldProps =  AriaInputProps & {
   className?: string;
@@ -67,13 +68,17 @@ const SelectValue = <T extends object>({
 const SelectTrigger = ({ className, children, ...props }: AriaButtonProps) => (
   <AriaButton
     className={
-        "flex h-10 w-full items-center justify-between rounded-md border border-input-border bg-input-background px-3 py-2 text-sm "+
+        cn(
+          
+        "flex h-10 w-full items-center justify-between rounded-md border border-input-border bg-input-background px-3 py-2 text-sm ",
         /* Disabled */
-        "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50"+
+        "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
         /* Focused */
-        "data-[focus-visible]:outline-none  "+
+        "data-[focus-visible]:outline-none  ",
         /* Resets */
-        "focus-visible:outline-none"}
+        "focus-visible:outline-none"
+      )}
+        
     {...props}
   >
     {composeRenderProps(children, (children) => (

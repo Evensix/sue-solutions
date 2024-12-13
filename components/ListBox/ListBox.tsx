@@ -1,5 +1,6 @@
 "use dom";
 
+import { cn } from "@/lib/utils";
 import {
   Collection as AriaCollection,
   Header as AriaHeader,
@@ -23,9 +24,11 @@ function ListBox<T extends object>({
   return (
     <AriaListBox
       className={
-          "group overflow-auto rounded-md border bg-popover p-1 text-popover-foreground shadow-md outline-none "+
+        cn(
+          "group overflow-auto rounded-md border bg-popover p-1 text-popover-foreground shadow-md outline-none",
           /* Empty */
           "data-[empty]:p-6 data-[empty]:text-center data-[empty]:text-sm"
+        )
       }
       {...props}
     />
@@ -43,22 +46,25 @@ const ListBoxItem = <T extends object>({
         props.textValue || (typeof children === "string" ? children : undefined)
       }
       className={
-          "relative flex w-full cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none"+
+        cn(
+          "relative flex w-full cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none ",
           /* Disabled */
-          "data-[disabled]:pointer-events-none data-[disabled]:opacity-50"+
+          "data-[disabled]:pointer-events-none data-[disabled]:opacity-50 ",
           /* Focused */
-          "data-[focused]:bg-accent data-[focused]:text-accent-foreground"+
+          "data-[focused]:bg-accent data-[focused]:text-accent-foreground ",
           /* Hovered */
-          "data-[hovered]:bg-accent data-[hovered]:text-accent-foreground"+
+          "data-[hovered]:bg-accent data-[hovered]:text-accent-foreground ",
           /* Selection */
-          "data-[selection-mode]:pl-8"
+          // "data-[selection-mode]:pl-8"
+        )
+
       }
       {...props}
     >
       {composeRenderProps(children, (children, renderProps) => (
         <>
           {renderProps.isSelected && (
-            <div className="absolute left-0 flex bg-input-background-disabled -z-10 w-full h-full items-center"></div>
+            <div className="absolute left-0 flex bg-input-halo-focus -z-10 w-full h-full items-center"></div>
           )}
           {children}
         </>

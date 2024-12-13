@@ -1,5 +1,6 @@
 "use dom";
 
+import { ErrorOutline, ErrorOutlineOutlined } from "@mui/icons-material";
 import React from "react";
 import {
   Input as AriaInput,
@@ -24,11 +25,13 @@ const InputField: React.FC<InputFieldProps> = ({
   type,
   ...props
 }) => {
+  console.log()
   return (
     // [&>div]:focus-within:bg-button-primary-border
     <div
       className={` brand relative flex border-input-border   border-[1px] px-2 gap-2 rounded-sm
         focus-within:border-input-border-focus  [&>.halo]:focus-within:bg-input-halo-focus 
+        ${ props["aria-errormessage"] ? 'border-input-border-error' : ""}
        ${disabled ? "[&>.backdrop]:bg-input-background-disabled" : ""}
       `}
     >
@@ -45,7 +48,8 @@ const InputField: React.FC<InputFieldProps> = ({
           className="focus:outline-none  px-2"
           {...props}
         ></AriaInput>
-        {rightMembers && WrapMembers([...rightMembers])}
+        {rightMembers && WrapMembers( [...rightMembers])}
+        { props["aria-errormessage"]  && WrapMembers( [<ErrorOutlineOutlined />])}
       </div>
 
     </div>

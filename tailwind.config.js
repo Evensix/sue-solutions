@@ -58,6 +58,7 @@ module.exports = {
         background: "var(--hsla-white)",
         border: "var(--hsla-black-alpha-25)",
         "border-focus": "var(--hsla-black-alpha-50)",
+        "border-error": "var(--hsla-error-600)",
         "halo-focus": "var( --hsla-brand-250)",
         prepost: "var(--hsla-black-alpha-50)",
         "background-hover": "var(--hsla-black-alpha-25)",
