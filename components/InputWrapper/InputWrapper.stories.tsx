@@ -30,6 +30,7 @@ export const Basic: Story = {
   args: {
     example: "Example text if needed",
     label: "Label",
+    labelFor: 'basic',
     hint: "Hint",
     children: <InputField name="basic"/>,
   },
