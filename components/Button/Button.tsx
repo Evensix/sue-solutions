@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 // Define button variants
 const buttonVariants = cva(
   [
-    "inline-flex relative group items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors",
+    "inline-flex transition ease-in-out delay-150 relative group items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors",
     /* Disabled */
     "data-[disabled]:pointer-events-none",
     /* Focus Visible */
@@ -51,15 +51,16 @@ const buttonVariants = cva(
       
       },
       size: {
-        primary: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "size-10",
+        xxsmall: " text-16  [&>.content]:h-16 [& * svg]:h-16   p-4",
+        xsmall:  " text-16  [&>.content]:h-20 [& * svg]:h-16  p-4",
+        small:   " text-20  [&>.content]:h-20 [& * svg]:h-20  p-6",
+        medium:  " text-20  [&>.content]:h-20 [& * svg]:h-20  p-8",
+        large:   " text-20  [&>.content]:h-20 [& * svg]:h-20  p-10",
       },
     },
     defaultVariants: {
       variant: "primary",
-      size: "primary",
+      size: "medium",
     },
   }
 );
@@ -80,17 +81,17 @@ const Button:React.FC<ButtonProps> = ({ className, variant, size, prefix, suffix
         className={composeRenderProps(className, (className) =>
           cn(
             buttonVariants({
-              variant,
               size,
+              variant,
               className,
             })
           )
         )}
         {...props}
       >
-        <div className="absolute -inset-1 rounded-md w-[calc(100%+8px)] h-[calc(100%+8px)] -z-10 transition-colors duration-600"/>
+        <div className="absolute  ease-in-out -inset-1 rounded-md w-[calc(100%+8px)] h-[calc(100%+8px)] -z-10 transition-colors duration-600"/>
 
-        <span className="flex items-center gap-2 ">
+        <span className="content flex items-center gap-2 ">
           {prefix && <span className="flex-shrink-0">{prefix}</span>}
           {children}
           {suffix && <span className="flex-shrink-0">{suffix}</span>}
@@ -101,3 +102,5 @@ const Button:React.FC<ButtonProps> = ({ className, variant, size, prefix, suffix
 };
 
 export default  Button ;
+export {buttonVariants}
+

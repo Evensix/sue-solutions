@@ -38,7 +38,7 @@ const InputField: React.FC<InputFieldProps> = ({
       `}
     >
       <div className="absolute backdrop left-0 top-0 rounded-sm w-[100%] h-[100%] bg-white z-10 "/>
-      <div className="absolute -inset-1 halo rounded-md w-[calc(100%+8px)] h-[calc(100%+8px)]  -z-20 "/>
+      <div style={{transition: 'all .3s ease'}} className="absolute -inset-1 halo rounded-md w-[calc(100%+8px)] h-[calc(100%+8px)] -z-20 "/>
       <div className="z-20 flex rounded-sm overflow-hidden">
         {leftMembers && WrapMembers([...leftMembers], "left")}
         <AriaInput

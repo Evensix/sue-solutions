@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Button, {  ButtonProps } from "./Button";
+import { CircleOutlined, CircleRounded, RingVolumeOutlined } from '@mui/icons-material';
 
 const meta = {
 	title: 'atom/Button',
@@ -79,6 +80,23 @@ export const ButtonStory = function () {
 				
 			</div>
 
+			<div className="brand" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
+                <strong style={{width: "5rem"}}>Size</strong>
+				
+				<Button  variant={"primary"} size={'xxsmall'} ><CircleOutlined/></Button>
+				<Button  variant={"primary"} size={'xsmall'}  ><CircleOutlined/></Button>
+				<Button  variant={"primary"} size={'small'}   ><CircleOutlined/></Button>
+				<Button  variant={"primary"} size={'medium'}  ><CircleOutlined/></Button>
+				<Button  variant={"primary"} size={'large'}   ><CircleOutlined/></Button>
+				
+				<Button  variant={"primary"} size={'xxsmall'} > test</Button>
+				<Button  variant={"primary"} size={'xsmall'}  > test</Button>
+				<Button  variant={"primary"} size={'small'}   > test</Button>
+				<Button  variant={"primary"} size={'medium'}  > test</Button>
+				<Button  variant={"primary"} size={'large'}   > test</Button>
+				
+
+			</div>
 
 			
 			<div style={{ marginBottom: '2rem', width: '100%', padding: '2rem 2rem 0' }}>

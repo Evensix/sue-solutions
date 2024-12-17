@@ -15,7 +15,6 @@ const InputArray: React.FC<InputWrapperProps> = ({
     <div>
       {inputArray.map((input, index) => (
         <div className="flex gap-2">
-          @
           <InputField key={index} {...input} />
         </div>
       ))}
