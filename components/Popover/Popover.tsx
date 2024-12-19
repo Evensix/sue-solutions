@@ -18,7 +18,7 @@ const Popover = ({ className, offset = 4, ...props }: AriaPopoverProps) => (
   <AriaPopover
     offset={offset}
     className={ cn(
-        "z-50 rounded-md border border-input-border bg-popover text-popover-foreground shadow-md outline-none ",
+        "z-50 radius-4 border border-input-border bg-popover text-popover-foreground shadow-md outline-none ",
         /* Entering */
         "data-[entering]:animate-in data-[entering]:fade-in-0 data-[entering]:zoom-in-95 ",
         /* Exiting */

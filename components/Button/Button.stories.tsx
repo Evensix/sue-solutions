@@ -51,29 +51,29 @@ export const ButtonStory = function () {
 					Small
 					<Button size={"small"} variant={"primary"} prefix={<CircleOutlined /> } />
 					<Button size={"small"} variant={"primary"} title='Button' >Button</Button>
-					<Button size={"small"} variant={"primary"} prefix={<div>O</div> } title='Button'  >Button</Button>
-					<Button size={"small"} variant={"primary"} suffix={<div>O</div>} title='Button'  >Button</Button>
-					<Button size={"small"} variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+					<Button size={"small"} variant={"primary"} prefix={<CircleOutlined /> } title='Button'  >Button</Button>
+					<Button size={"small"} variant={"primary"} suffix={<CircleOutlined />} title='Button'  >Button</Button>
+					<Button size={"small"} variant={"primary"} prefix={<CircleOutlined /> } suffix={<CircleOutlined />} title='Button' >Button</Button>
 					<Button size={"small"} isDisabled={true}  variant={"primary"} title='Button'  >Button</Button>
 				</div>
 				
 				<div className='flex flex-col gap-6'>
 					Medium 
-					<Button  variant={"primary"} prefix={<CircleOutlined /> } />
-					<Button  variant={"primary"} title='Button' >Button</Button>
-					<Button  variant={"primary"} prefix={<div>O</div> } title='Button'  >Button</Button>
-					<Button  variant={"primary"} suffix={<div>O</div>} title='Button'  >Button</Button>
-					<Button  variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
-					<Button isDisabled={true}  variant={"primary"} title='Button'  >Button</Button>
+					<Button  size={"medium"}  variant={"primary"} prefix={<CircleOutlined /> } />
+					<Button  size={"medium"}  variant={"primary"} title='Button' >Button</Button>
+					<Button  size={"medium"}  variant={"primary"} prefix={<CircleOutlined /> } title='Button'  >Button</Button>
+					<Button  size={"medium"}  variant={"primary"} suffix={<CircleOutlined />} title='Button'  >Button</Button>
+					<Button  size={"medium"}  variant={"primary"} prefix={<CircleOutlined /> } suffix={<CircleOutlined />} title='Button' >Button</Button>
+					<Button  size={"medium"}  isDisabled={true}  variant={"primary"} title='Button'  >Button</Button>
 				</div>
 
 				<div className='flex flex-col gap-6'>
 					Large
 					<Button size={"large"} variant={"primary"} prefix={<CircleOutlined />} />
 					<Button size={"large"} variant={"primary"} title='Button' >Button</Button>
-					<Button size={"large"} variant={"primary"} prefix={<div>O</div> } title='Button'  >Button</Button>
-					<Button size={"large"} variant={"primary"} suffix={<div>O</div>} title='Button'  >Button</Button>
-					<Button size={"large"} variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+					<Button size={"large"} variant={"primary"} prefix={<CircleOutlined /> } title='Button'  >Button</Button>
+					<Button size={"large"} variant={"primary"} suffix={<CircleOutlined />} title='Button'  >Button</Button>
+					<Button size={"large"} variant={"primary"} prefix={<CircleOutlined /> } suffix={<CircleOutlined />} title='Button' >Button</Button>
 					<Button size={"large"} isDisabled={true}  variant={"primary"} title='Button'  >Button</Button>
 				</div>
 

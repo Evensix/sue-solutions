@@ -10,6 +10,7 @@ import {
 
 import { cn } from "@/lib/utils";
 import StyledText from "../StyledText/StyledText";
+import { Height } from "@mui/icons-material";
 
 // Define button variants
 const buttonVariants = cva(
@@ -86,6 +87,21 @@ const Button:React.FC<ButtonProps> = ({ className, variant, size, prefix, suffix
     medium: 14,
     large: 16,
   }
+  const iconSizeMap = {
+    xxsmall: '16px',
+    xsmall:'16px',
+    small: '18px',
+    medium: '18px',
+    large: '22px',
+  }
+
+  const PrefixComponent = () => {
+    return prefix ? React.cloneElement(prefix as React.ReactElement, { style: { display: 'flex', justifyContent: 'center', alignItems: 'center', height: iconSizeMap[size], width: iconSizeMap[size] } }) : null;
+  };
+
+  const SuffixComponent = () => {
+    return suffix ? React.cloneElement(suffix as React.ReactElement, { style: { display: 'flex', justifyContent: 'center', alignItems: 'center', height: iconSizeMap[size], width:iconSizeMap[size] } }) : null;
+  };
 
   return ( 
       <AriaButton
@@ -103,9 +119,11 @@ const Button:React.FC<ButtonProps> = ({ className, variant, size, prefix, suffix
         <span className="absolute halo ease-in-out -inset-1 bg-transparent radius-8 w-[calc(100%+8px)] h-[calc(100%+8px)] -z-10 transition-colors duration-600"/>
 
         <span className="content flex items-center gap-2 ">
-          {prefix}
+          {/* {prefix} */}
+          <PrefixComponent />
           {title && <StyledText size={size ? textSizeMap[size] : 14} className="flex-1" as="span" >{title}</StyledText>}
-          {suffix}
+          {/* {suffix} */}
+          <SuffixComponent />
         </span>
         
       </AriaButton>

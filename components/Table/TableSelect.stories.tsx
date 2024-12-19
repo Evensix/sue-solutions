@@ -9,7 +9,7 @@ import {
 } from "@react-stately/table";
 
 export default {
-  title: "Base/TableDemo",
+  title: "Base/TableSelectDemo",
 };
 
 export const Colours = function () {
@@ -35,15 +35,16 @@ export const Colours = function () {
     >
       <Table
         aria-label="Table with selection"
-        selectionMode="none"
+        selectionMode="multiple"
         selectedKeys={selectedKeys}
+        // onSelectionChange={setSelectedKeys}
       >
         <TableHeader columns={columns}>
-          {(column) => <Column key={column.uid}></Column>}
+          {(column) => <Column key={column.uid}>{column.name}</Column>}
         </TableHeader>
         <TableBody items={rows}>
           {(item: any) => (
-            <Row>{(columnKey: any) => <Cell> {item[columnKey] === "" ? "Empty" : item[columnKey] }</Cell>}</Row>
+            <Row>{(columnKey: any) => <Cell>{item[columnKey]}</Cell>}</Row>
           )}
         </TableBody>
       </Table>
@@ -55,4 +56,4 @@ Colours.parameters = {
     type: "done",
   },
 };
-Colours.storyName = "Table";
+Colours.storyName = "TableSelect";

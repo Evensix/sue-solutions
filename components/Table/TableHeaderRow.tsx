@@ -1,7 +1,7 @@
+import { useTableHeaderRow } from "@react-aria/table";
 import { FC, useRef } from "react";
-import { useTableHeaderRow } from "react-aria";
 
-export const TableHeaderRow: FC<{
+const TableHeaderRow: FC<{
   item: any;
   state: any;
   children: React.ReactNode;
@@ -15,3 +15,5 @@ export const TableHeaderRow: FC<{
     </tr>
   );
 };
+
+export default TableHeaderRow;

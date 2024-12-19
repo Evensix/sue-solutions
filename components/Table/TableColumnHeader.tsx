@@ -1,7 +1,9 @@
+import { useTableColumnHeader } from "@react-aria/table";
+import { useFocusRing } from "@react-aria/focus";
+import { mergeProps } from "@react-aria/utils";
 import { FC, useRef } from "react";
-import { mergeProps, useFocusRing, useTableColumnHeader } from "react-aria";
 
-export const TableColumnHeader: FC<{ column: any; state: any }> = ({
+const TableColumnHeader: FC<{ column: any; state: any; }> = ({
   column,
   state,
 }) => {
@@ -19,12 +21,12 @@ export const TableColumnHeader: FC<{ column: any; state: any }> = ({
       {...mergeProps(columnHeaderProps, focusProps)}
       colSpan={column.colspan}
       style={{
-        textAlign: column.colspan > 1 ? "center" : "left",
-        padding: "5px 10px",
-        outline: "none",
-        boxShadow: isFocusVisible ? "inset 0 0 0 2px orange" : "none",
-        cursor: "default",
+        // textAlign: column.colspan > 1 ? "center" : "left",
+        // padding: "5px 10px",
+        outline: isFocusVisible ? "2px solid orange" : "none",
+        // cursor: "default",
       }}
+      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
       ref={ref}
     >
       {column.rendered}
@@ -45,3 +47,5 @@ export const TableColumnHeader: FC<{ column: any; state: any }> = ({
     </th>
   );
 };
+
+export default TableColumnHeader;

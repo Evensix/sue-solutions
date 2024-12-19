@@ -99,8 +99,8 @@ module.exports = {
       background: "var(--gradient-01)",
       transparent: "var(--hsla-transparent)",
       foreground: "hsl(var(--foreground))",
-      blue: "var(--hsla-button-background-primary)",
-      red: "var(--hsla-error-600)",
+      blue: "var(--hsla-brand-800)",
+      red: "var(--hsla-error-200)",
       white: "var(--hsla-white)",
 
       image: {
