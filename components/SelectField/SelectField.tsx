@@ -70,7 +70,7 @@ const SelectTrigger = ({ className, children, ...props }: AriaButtonProps) => (
     className={
         cn(
           
-        "flex h-10 w-full items-center justify-between rounded-md border border-input-border bg-input-background px-3 py-2 text-sm ",
+        "flex  w-full items-center justify-between rounded-md border border-input-border bg-input-background px-3 py-2 text-sm ",
         /* Disabled */
         "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
         /* Focused */
@@ -98,9 +98,6 @@ const SelectPopover = ({ className, ...props }: AriaPopoverProps) => (
 )
 interface SelectProps<T extends object>
   extends Omit<AriaSelectProps<T>, "children"> {
-  label?: string;
-  description?: string;
-  errorMessage?: string | ((validation: AriaValidationResult) => string);
   items?: Iterable<{ key: string | number; name: string }>; 
   children?: React.ReactNode | ((item: T) => React.ReactNode);
 }
@@ -126,29 +123,19 @@ const SelectListBox = <T extends { key: string | number; name: string }>({
 };
 
 function SelectField<T extends object>({
-  label,
-  description,
-  errorMessage,
   children,
   className,
   items,
   ...props
 }: SelectProps<T>) {
   return (
-    <Select className="group flex flex-col gap-2 min-w-[200px]" {...props}>
-      {label && <Label className="text-sm font-medium">{label}</Label>}
-      {description && (
-        <p className="text-xs text-gray-500">{description}</p>
-      )}
-      <SelectTrigger>
-        <SelectValue />
+    <Select className="group flex flex-col gap-2   min-w-[200px]" {...props}>
+      <SelectTrigger >
+        <SelectValue  />
       </SelectTrigger>
       <SelectPopover>
         <SelectListBox items={items} />
       </SelectPopover>
-      {typeof errorMessage === "string" && (
-        <p className="text-sm text-red-500">{errorMessage}</p>
-      )}
     </Select>
   );
 }

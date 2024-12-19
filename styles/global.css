@@ -98,7 +98,7 @@
 		--container-padding: 1.25rem;
 		--section-spacing: 3rem;
 
-        --hsla-transparent: hsla(0, 0%, 0%, 0.1);
+        --hsla-transparent: hsla(0, 0%, 0%, 0);
 
         --hsla-white: hsla(0, 0%, 100%, 1);
         --hsla-white-alpha-8: hsla(0, 0%, 100%, 0.1);
@@ -310,14 +310,17 @@
 
     html {
         font-family: var(--font-plus-jakarta-sans);
-
-		input[type="number"]::-webkit-inner-spin-button,
+		
+		/* input[type="number"]::-webkit-inner-spin-button,
 		input[type="number"]::-webkit-outer-spin-button {
 		  -webkit-appearance: none;
 		  margin: 0;
-		};
+		}; */
     }
-
+	
+	input::-webkit-resizer {
+		display: none;
+	};
     html,
 	body {
 		font-family: var(--font-plus-jakarta-sans);
@@ -443,7 +446,7 @@
 	.radius-24 { border-radius: 24px }
 	.radius-32 { border-radius: 32px }
 	.radius-40 { border-radius: 40px }
-	.raduis-full { border-radius: 99999px}
+	.radius-full { border-radius: 9999px}
 
 	/* .spacing-0 { padding: 0px}
 	.spacing-2 { padding: 2px}
@@ -497,118 +500,7 @@
 	.container-padding-mobile {padding: 1rem}
 	.container-padding-desktop {padding: 2rem}
 	.container-max-width-desktop {padding: 16rem}
-	
-	
-	.semibold-56 { @apply font-plus-jakarta-sans font-56 font-semibold; }
-	.regular-56 { @apply font-plus-jakarta-sans font-56 font-normal; }
-	.medium-56 { @apply font-plus-jakarta-sans font-56 font-medium; }
 
-	.semibold-48 { @apply font-plus-jakarta-sans font-48 font-semibold; }
-	.regular-48 { @apply font-plus-jakarta-sans font-48 font-normal; }
-	.medium-48 { @apply font-plus-jakarta-sans font-48 font-medium; }
-
-	.semibold-40 { @apply font-plus-jakarta-sans font-40 font-semibold; }
-	.regular-40 { @apply font-plus-jakarta-sans font-40 font-normal; }
-	.medium-40 { @apply font-plus-jakarta-sans font-40 font-medium; }
-
-	.semibold-32 { @apply font-plus-jakarta-sans font-32 font-semibold; }
-	.semibold-italic-32 { @apply font-plus-jakarta-sans font-32 font-semibold italic; }
-	.semibold-underline-32 { @apply font-plus-jakarta-sans font-32 font-semibold underline; }
-
-	.regular-32 { @apply font-plus-jakarta-sans font-32 font-normal; }
-	.regular-italic-32 { @apply font-plus-jakarta-sans font-32 font-normal italic; }
-	.regular-underline-32 { @apply font-plus-jakarta-sans font-32 font-normal underline; }
-
-	.medium-32 { @apply font-plus-jakarta-sans font-32 font-medium; }
-	.medium-italic-32 { @apply font-plus-jakarta-sans font-32 font-medium italic; }
-	.medium-underline-32 { @apply font-plus-jakarta-sans font-32 font-medium underline; }
-
-	.semibold-24 { @apply font-plus-jakarta-sans font-24 font-semibold; }
-	.semibold-italic-24 { @apply font-plus-jakarta-sans font-24 font-semibold italic; }
-	.semibold-underline-24 { @apply font-plus-jakarta-sans font-24 font-semibold underline; }
-
-	.regular-24 { @apply font-plus-jakarta-sans font-24 font-normal; }
-	.regular-italic-24 { @apply font-plus-jakarta-sans font-24 font-normal italic; }
-	.regular-underline-24 { @apply font-plus-jakarta-sans font-24 font-normal underline; }
-
-	.medium-24 { @apply font-plus-jakarta-sans font-24 font-medium; }
-	.medium-italic-24 { @apply font-plus-jakarta-sans font-24 font-medium italic; }
-	.medium-underline-24 { @apply font-plus-jakarta-sans font-24 font-medium underline; }
-
-	.semibold-20 { @apply font-plus-jakarta-sans font-20 font-semibold; }
-	.semibold-italic-20 { @apply font-plus-jakarta-sans font-20 font-semibold italic; }
-	.semibold-underline-20 { @apply font-plus-jakarta-sans font-20 font-semibold underline; }
-
-	.regular-20 { @apply font-plus-jakarta-sans font-20 font-normal; }
-	.regular-italic-20 { @apply font-plus-jakarta-sans font-20 font-normal italic; }
-	.regular-underline-20 { @apply font-plus-jakarta-sans font-20 font-normal underline; }
-
-	.medium-20 { @apply font-plus-jakarta-sans font-20 font-medium; }
-	.medium-italic-20 { @apply font-plus-jakarta-sans font-20 font-medium italic; }
-	.medium-underline-20 { @apply font-plus-jakarta-sans font-20 font-medium underline; }
-
-	.semibold-18 { @apply font-plus-jakarta-sans font-18 font-semibold; }
-	.semibold-italic-18 { @apply font-plus-jakarta-sans font-18 font-semibold italic; }
-	.semibold-underline-18 { @apply font-plus-jakarta-sans font-18 font-semibold underline; }
-
-	.regular-18 { @apply font-plus-jakarta-sans font-18 font-normal; }
-	.regular-italic-18 { @apply font-plus-jakarta-sans font-18 font-normal italic; }
-	.regular-underline-18 { @apply font-plus-jakarta-sans font-18 font-normal underline; }
-
-	.medium-18 { @apply font-plus-jakarta-sans font-18 font-medium; }
-	.medium-italic-18 { @apply font-plus-jakarta-sans font-18 font-medium italic; }
-	.medium-underline-18 { @apply font-plus-jakarta-sans font-18 font-medium underline; }
-	
-	.semibold-16 { @apply font-plus-jakarta-sans font-16 font-semibold; }
-	.semibold-italic-16 { @apply font-plus-jakarta-sans font-16 font-semibold italic; }
-	.semibold-underline-16 { @apply font-plus-jakarta-sans font-16 font-semibold underline; }
-
-	.regular-16 { @apply font-plus-jakarta-sans font-16 font-normal; }
-	.regular-italic-16 { @apply font-plus-jakarta-sans font-16 font-normal italic; }
-	.regular-underline-16 { @apply font-plus-jakarta-sans font-16 font-normal underline; }
-
-	.medium-16 { @apply font-plus-jakarta-sans font-16 font-medium; }
-	.medium-italic-16 { @apply font-plus-jakarta-sans font-16 font-medium italic; }
-	.medium-underline-16 { @apply font-plus-jakarta-sans font-16 font-medium underline; }
-	
-	.semibold-14 { @apply font-plus-jakarta-sans font-14 font-semibold; }
-	.semibold-italic-14 { @apply font-plus-jakarta-sans font-14 font-semibold italic; }
-	.semibold-underline-14 { @apply font-plus-jakarta-sans font-14 font-semibold underline; }
-
-	.regular-14 { @apply font-plus-jakarta-sans font-14 font-normal; }
-	.regular-italic-14 { @apply font-plus-jakarta-sans font-14 font-normal italic; }
-	.regular-underline-14 { @apply font-plus-jakarta-sans font-14 font-normal underline; }
-
-	.medium-14 { @apply font-plus-jakarta-sans font-14 font-medium; }
-	.medium-italic-14 { @apply font-plus-jakarta-sans font-14 font-medium italic; }
-	.medium-underline-14 { @apply font-plus-jakarta-sans font-14 font-medium underline; }
-	
-	.semibold-12 { @apply font-plus-jakarta-sans font-12 font-semibold; }
-	.semibold-underline-12 { @apply font-plus-jakarta-sans font-12 font-semibold underline; }
-
-	.regular-12 { @apply font-plus-jakarta-sans font-12 font-normal; }
-	.regular-underline-12 { @apply font-plus-jakarta-sans font-12 font-normal underline; }
-
-	.medium-12 { @apply font-plus-jakarta-sans font-12 font-medium; }
-	.medium-underline-12 { @apply font-plus-jakarta-sans font-12 font-medium underline; }
-	
-	.semibold-11 { @apply font-plus-jakarta-sans font-11 font-semibold; }
-	.semibold-underline-11 { @apply font-plus-jakarta-sans font-11 font-semibold underline; }
-
-	.regular-11 { @apply font-plus-jakarta-sans font-11 font-normal; }
-	.regular-underline-11 { @apply font-plus-jakarta-sans font-11 font-normal underline; }
-
-	.medium-11 { @apply font-plus-jakarta-sans font-11 font-medium; }
-	.medium-underline-11 { @apply font-plus-jakarta-sans font-11 font-medium underline; }
-	
-	.semibold-10 { @apply font-plus-jakarta-sans font-10 font-semibold; }
-	.semibold-underline-10 { @apply font-plus-jakarta-sans font-10 font-semibold underline; }
-
-	.regular-10 { @apply font-plus-jakarta-sans font-10 font-normal; }
-	.regular-underline-10 { @apply font-plus-jakarta-sans font-10 font-normal underline; }
-
-	.medium-10 { @apply font-plus-jakarta-sans font-10 font-medium; }
-	.medium-underline-10 { @apply font-plus-jakarta-sans font-10 font-medium underline; }
     
 }
 

@@ -37,23 +37,43 @@ export const ButtonStory = function () {
 			<div className="brand" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Primary</strong>
 				
-				<Button  variant={"primary"} >Button</Button>
-				<Button  variant={"primary"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"primary"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"primary"} >Button</Button>
+				<div className='flex flex-col gap-6'>
+					Small
+					<Button size={"small"} variant={"primary"} title='Button' >Button</Button>
+					<Button size={"small"} variant={"primary"} prefix={<div>O</div> } title='Button'  >Button</Button>
+					<Button size={"small"} variant={"primary"} suffix={<div>O</div>} title='Button'  >Button</Button>
+					<Button size={"small"} variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+					<Button size={"small"} isDisabled={true}  variant={"primary"} title='Button'  >Button</Button>
+				</div>
 				
+				<div className='flex flex-col gap-6'>
+					Medium 
+					<Button  variant={"primary"} title='Button' >Button</Button>
+					<Button  variant={"primary"} prefix={<div>O</div> } title='Button'  >Button</Button>
+					<Button  variant={"primary"} suffix={<div>O</div>} title='Button'  >Button</Button>
+					<Button  variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+					<Button isDisabled={true}  variant={"primary"} title='Button'  >Button</Button>
+				</div>
+
+				<div className='flex flex-col gap-6'>
+					Large
+					<Button size={"large"} variant={"primary"} title='Button' >Button</Button>
+					<Button size={"large"} variant={"primary"} prefix={<div>O</div> } title='Button'  >Button</Button>
+					<Button size={"large"} variant={"primary"} suffix={<div>O</div>} title='Button'  >Button</Button>
+					<Button size={"large"} variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+					<Button size={"large"} isDisabled={true}  variant={"primary"} title='Button'  >Button</Button>
+				</div>
 
 			</div>
 
 			<div className="brand" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Secondary</strong>
 				
-				<Button  variant={"secondary"} >Button</Button>
-				<Button  variant={"secondary"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"secondary"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"secondary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"secondary"} >Button</Button>
+				<Button  variant={"secondary"} title='Button'  >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } title='Button' >Button</Button>
+				<Button  variant={"secondary"} suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button isDisabled={true}  variant={"secondary"} title='Button' >Button</Button>
 				
 			</div>
 
@@ -61,41 +81,23 @@ export const ButtonStory = function () {
 			<div className="brand" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Tertiary</strong>
 				
-				<Button  variant={"tertiary"} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"tertiary"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"tertiary"} >Button</Button>
+				<Button  variant={"tertiary"} title='Button' >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } title='Button' >Button</Button>
+				<Button  variant={"tertiary"} suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button isDisabled={true}  variant={"tertiary"} title='Button' >Button</Button>
 				
 			</div>
 			
 			<div className="brand" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Link</strong>
 				
-				<Button  variant={"link"} >Button</Button>
-				<Button  variant={"link"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"link"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"link"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"link"} >Button</Button>
+				<Button size="link" variant={"link"} title='Button' >Button</Button>
+				<Button size="link" variant={"link"} prefix={<div>O</div> } title='Button' >Button</Button>
+				<Button size="link" variant={"link"} suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button size="link" variant={"link"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button isDisabled={true}  variant={"link"} title='Button' >Button</Button>
 				
-			</div>
-
-			<div className="brand" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
-                <strong style={{width: "5rem"}}>Size</strong>
-				
-				<Button  variant={"primary"} size={'xxsmall'} ><CircleOutlined/></Button>
-				<Button  variant={"primary"} size={'xsmall'}  ><CircleOutlined/></Button>
-				<Button  variant={"primary"} size={'small'}   ><CircleOutlined/></Button>
-				<Button  variant={"primary"} size={'medium'}  ><CircleOutlined/></Button>
-				<Button  variant={"primary"} size={'large'}   ><CircleOutlined/></Button>
-				
-				<Button  variant={"primary"} size={'xxsmall'} > test</Button>
-				<Button  variant={"primary"} size={'xsmall'}  > test</Button>
-				<Button  variant={"primary"} size={'small'}   > test</Button>
-				<Button  variant={"primary"} size={'medium'}  > test</Button>
-				<Button  variant={"primary"} size={'large'}   > test</Button>
-				
-
 			</div>
 
 			
@@ -106,11 +108,11 @@ export const ButtonStory = function () {
 			<div className="error" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Primary</strong>
 				
-				<Button  variant={"primary"} >Button</Button>
-				<Button  variant={"primary"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"primary"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"primary"} >Button</Button>
+				<Button  variant={"primary"} title='Button' >Button</Button>
+				<Button  variant={"primary"} prefix={<div>O</div> } title='Button' >Button</Button>
+				<Button  variant={"primary"} suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button  variant={"primary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button isDisabled={true}  variant={"primary"} title='Button' >Button</Button>
 				
 
 			</div>
@@ -118,11 +120,11 @@ export const ButtonStory = function () {
 			<div className="error" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Secondary</strong>
 				
-				<Button  variant={"secondary"} >Button</Button>
-				<Button  variant={"secondary"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"secondary"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"secondary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"secondary"} >Button</Button>
+				<Button  variant={"secondary"} title='Button' >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } title='Button' >Button</Button>
+				<Button  variant={"secondary"} suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button  variant={"secondary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button isDisabled={true}  variant={"secondary"} title='Button' >Button</Button>
 				
 			</div>
 
@@ -130,22 +132,22 @@ export const ButtonStory = function () {
 			<div className="error" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Tertiary</strong>
 				
-				<Button  variant={"tertiary"} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"tertiary"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"tertiary"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"tertiary"} >Button</Button>
+				<Button  variant={"tertiary"} title='Button' >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } title='Button' >Button</Button>
+				<Button  variant={"tertiary"} suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button  variant={"tertiary"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button isDisabled={true}  variant={"tertiary"} title='Button' >Button</Button>
 				
 			</div>
 			
 			<div className="error" style={{ marginBottom: '2rem', width: '100%', padding: '2rem', gap: '1rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <strong style={{width: "5rem"}}>Link</strong>
 				
-				<Button  variant={"link"} >Button</Button>
-				<Button  variant={"link"} prefix={<div>O</div> } > Button</Button>
-				<Button  variant={"link"} suffix={<div>O</div>} >Button</Button>
-				<Button  variant={"link"} prefix={<div>O</div> } suffix={<div>O</div>} >Button</Button>
-				<Button isDisabled={true}  variant={"link"} >Button</Button>
+				<Button  variant={"link"} title='Button' >Button</Button>
+				<Button  variant={"link"} prefix={<div>O</div> } title='Button' >Button</Button>
+				<Button  variant={"link"} suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button  variant={"link"} prefix={<div>O</div> } suffix={<div>O</div>} title='Button' >Button</Button>
+				<Button size="link" isDisabled={true}  variant={"link"} title='Button' >Button</Button>
 				
 			</div>
 

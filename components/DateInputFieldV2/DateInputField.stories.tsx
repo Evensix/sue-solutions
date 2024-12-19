@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {DateInputField} from '../DateInputFieldV2/DateInputField';
 
 const meta = {
-  title: 'atom/ProfileAvatar',
+  title: 'atom/DateInputV2',
   component: DateInputField,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -21,7 +21,6 @@ type Story = StoryObj<typeof meta>;
 export const Basic: Story = {
   name: "Basic",
   args: {
-    name: "basic",
   },
 };
 

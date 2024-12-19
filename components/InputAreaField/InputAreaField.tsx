@@ -25,7 +25,7 @@ const InputField: React.FC<InputAreaFieldProps> = ({
 }) => {
   return (
     <div
-      className={` flex border-input-border focus-within:border-input-border-focus border-[1px] px-2 gap-2 rounded-sm
+      className={` flex border-input-border focus-within:border-input-border-focus border-[1px] p-2 gap-2 rounded-sm
        ${disabled ? "bg-input-background-disabled" : ""}
       `}
     >
@@ -33,8 +33,9 @@ const InputField: React.FC<InputAreaFieldProps> = ({
       <AriaTextArea
         name={name}
         spellCheck={false}
+        
         disabled={disabled}
-        className="focus:outline-none  px-2"
+        className="focus:outline-none  px-2 "
         {...props}
       ></AriaTextArea>
       {rightMembers && WrapMembers([...rightMembers])}

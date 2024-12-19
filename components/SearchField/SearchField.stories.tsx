@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ProfileAvatar from './ProfileAvatar';
+import { fn, resetAllMocks } from '@storybook/test';
+import  InputField  from './SearchField';
+import { MailOutline } from '@mui/icons-material';
+import { userEvent, within, expect } from '@storybook/test';
 
 const meta = {
-  title: 'atom/ProfileAvatar',
-  component: ProfileAvatar,
+  title: 'atom/InputSearch',
+  component: InputField,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
@@ -12,7 +15,7 @@ const meta = {
   },
   args: {
   },
-} satisfies Meta<typeof ProfileAvatar>;
+} satisfies Meta<typeof InputField>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -20,10 +23,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   name: "Basic",
-  args:{
-    avatar: 'https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250'
-  }
-
+  args: {
+    length: "sm",
+    name: "basic",
+  },
 };
-
-

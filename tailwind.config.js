@@ -1,3 +1,5 @@
+const { transform } = require('typescript');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -93,10 +95,18 @@ module.exports = {
 
     colors: {
       background: "var(--gradient-01)",
+      transparent: "var(--hsla-transparent)",
       foreground: "hsl(var(--foreground))",
       blue: "var(--hsla-button-background-primary)",
       red: "var(--hsla-error-600)",
       white: "var(--hsla-white)",
+
+      image: {
+        'avatar-border': "var(--hsla-black-alpha-25)",
+        'avatar-placeholder-background': "var(--hsla-brand-250)",
+        'avatar-placeholder-text': "var(--hsla-white)",
+      },
+
       input : {
         background: "var(--hsla-white)",
         border: "var(--hsla-black-alpha-25)",
@@ -106,6 +116,7 @@ module.exports = {
         prepost: "var(--hsla-black-alpha-50)",
         "background-hover": "var(--hsla-black-alpha-25)",
         "background-disabled": "var(--hsla-neutral-grey-100)",
+        "search-background": "var(--hsla-black-alpha-8)",
       },
 
       button: {
