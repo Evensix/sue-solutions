@@ -90,7 +90,7 @@
 @layer base {
 
     :root {
-
+		
 
 		--font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
 
@@ -217,6 +217,12 @@
 		--hsla-gradient-2 : hsla(250, 100%, 95%, 1);
 		--gradient-01: linear-gradient(291deg, var(--hsla-gradient-1) 0%, var(--hsla-gradient-2) 66%);
 
+
+		--bg-color: var(--hsla-white);
+		--text-color: var(--hsla-black)
+
+		/* --hexa-text-primary: var(--hsla-black); */
+
 		@apply md:[--section-spacing:4rem];
 	}
 
@@ -325,18 +331,26 @@
 	body {
 		font-family: var(--font-plus-jakarta-sans);
 		font-size: clamp(1rem, 0.427rem + 0.545vw, 1.3rem);
-		color: hsl(var(--hexa-text-primary) / 1);
+
+		background-color: var(--bg-color);
+		color: var(--text-color);
+
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		scroll-padding-top: 8rem;
 		padding: 0 !important;
-	};
+		
 
+	};
+	body.dark {
+		--bg-color: var(--hsla-brand-900);
+		--text-color: var(--hsla-white);
+	  }
 	body::after {
 		content: "";
 		display: block;
 	  
-		background: var(--gradient-01);
+		/* background: var(--gradient-01); */
 	  
 		position: fixed;
 		top: 0;

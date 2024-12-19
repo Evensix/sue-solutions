@@ -14,7 +14,7 @@ import StyledText from "../StyledText/StyledText";
 // Define button variants
 const buttonVariants = cva(
   [
-    "inline-flex transition ease-in-out delay-150 relative group items-center justify-center whitespace-nowrap radius-6 ring-offset-background transition-colors",
+    "inline-flex transition w-fit ease-in-out relative group items-center justify-center whitespace-nowrap radius-6 ring-offset-background transition-colors",
     /* Disabled */
     "data-[disabled]:pointer-events-none",
     /* Focus Visible */
@@ -45,14 +45,16 @@ const buttonVariants = cva(
       
 
         "link":
-        " bg-button-background-link text-button-text-link !p-0"+ 
+        " bg-button-background-link text-button-text-link !p-0 "+ 
         "data-[pressed]:bg-button-background-link "+
         "data-[hovered]:bg-button-background-link-hover data-[hovered]:text-button-text-link-hover "+
         "data-[disabled]:text-button-text-link-disabled data-[disabled]:bg-button-background-link-disabled",
       
       },
       size: {
-        link:   " [&>.content]:h-20 [& * svg]:h-20  p-0",
+        link:    " [&>.content]:h-20 [& * svg]:h-20  p-0",
+        xxsmall: " [&>.content]:h-20 [& * svg]:h-10  p-2",
+        xsmall:  " [&>.content]:h-20 [& * svg]:h-10  p-4",
         small:   " [&>.content]:h-20 [& * svg]:h-20  p-6",
         medium:  " [&>.content]:h-20 [& * svg]:h-20  p-8",
         large:   " [&>.content]:h-20 [& * svg]:h-20  p-10",
@@ -101,9 +103,9 @@ const Button:React.FC<ButtonProps> = ({ className, variant, size, prefix, suffix
         <span className="absolute halo ease-in-out -inset-1 bg-transparent radius-8 w-[calc(100%+8px)] h-[calc(100%+8px)] -z-10 transition-colors duration-600"/>
 
         <span className="content flex items-center gap-2 ">
-          {prefix && <div className="flex-shrink-0">{prefix}</div>}
-          <StyledText size={size ? textSizeMap[size] : 14} className="flex-1" as="span" >{title}</StyledText>
-          {suffix && <div className="flex-shrink-0">{suffix}</div>}
+          {prefix}
+          {title && <StyledText size={size ? textSizeMap[size] : 14} className="flex-1" as="span" >{title}</StyledText>}
+          {suffix}
         </span>
         
       </AriaButton>

@@ -16,15 +16,12 @@ export const Headings = function () {
 					<div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
 						{weightArray.map((weight) => {
 							return (
-								<StyledText as="div"  size={size} weight={weight} className="mb-[1rem] flex flex-col" >
-
-									<span>Size {size}</span>
-									<span>{weight}</span>
-									
+								<div className="mb-[1rem] flex flex-col">
+									<StyledText as="span"  size={size} weight={weight} >Size {size}</StyledText>
+									<StyledText as="span"  size={size} weight={weight} >{weight}</StyledText>
 									<StyledText as="span"  size={size} weight={weight} italic='italic' > Italic </StyledText>
 									<StyledText as="span" size={size} weight={weight} decoration="underline"> Underline </StyledText>
-
-								</StyledText>
+								</div>
 							)
 						})}
 

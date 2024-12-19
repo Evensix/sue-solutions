@@ -1,8 +1,9 @@
 import type { Preview } from "@storybook/react";
 import "../styles/global.css";
-
+import { ModeDecorator } from "./modeDecorator";
 import localFont from 'next/font/local';
-
+import { withThemeByClassName } from '@storybook/addon-themes';
+export const decorators = [ModeDecorator];
 
 const PlusJakarta = localFont({
 	src: '../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf',
@@ -158,6 +159,13 @@ const preview: Preview = {
 		},
 	},
   decorators: [
+	withThemeByClassName({
+		themes: {
+		  light: 'light',
+		  dark: 'dark',
+		},
+		defaultTheme: 'light',
+	  }),
 		(Story, context) => {
 			return (
 				<div
