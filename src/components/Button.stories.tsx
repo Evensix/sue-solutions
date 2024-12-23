@@ -11,7 +11,14 @@ export default {
 		variant: {
 			control: 'select',
 			options: ['primary', 'secondary', 'tertiary', 'link'],
-			theme: ['brand',  'neutral', 'destructive'],
+		},
+		theme: {
+			control: 'select',
+			options: ['brand', 'error'],
+		},
+		size: {
+			control: 'select',
+			options: ['xxsmall', 'xsmall', 'small', 'medium', 'large'],
 		},
 	},
 	args: {
@@ -30,17 +37,20 @@ export const Primary = {
 export const Secondary = {
 	args: {
 		variant: 'secondary',
+		theme: 'brand',
 	},
 };
 
 export const Tertiary = {
 	args: {
 		variant: 'tertiary',
+		theme: 'brand',
 	},
 };
 
 export const Link = {
 	args: {
 		variant: 'link',
+		theme: 'brand',
 	},
 };

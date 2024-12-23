@@ -5,7 +5,7 @@ export default {
 };
 
 export const Headings = function () {
-	const sizeArray = [56,48,40,32,24,20,16,14,12,11, 10];
+	const sizeArray = [56,48,40,32,24,20,16,14,12,11,10];
 	const weightArray = ['semibold', 'medium', 'regular'];
 
 	return (

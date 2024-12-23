@@ -4,7 +4,7 @@ import { focusRing } from './utils.ts';
 
 export interface ButtonProps extends RACButtonProps {
 	variant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'link';
-	theme?: 'brand' | 'neutral' | 'destructive';
+	theme?: 'brand' | 'error' | 'neutral';
 	size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large';
 }
 
@@ -20,75 +20,87 @@ const button = tv({
 			large:   " h-20 [& * svg]:h-20  p-10",
 		},
 		variant : {
-			primary: [
+			'primary-brand': [
 				"bg-brand-600 text-white ",
 				"hover:bg-brand-700",
 				"pressed:bg-brand-800 ",
 				"disabled:text-white disabled:bg-neutral-900/5",
 				"outline-brand-500/25 dark:outline-brand-500/25"
 			],
-			secondary: [
-			"bg-white text-neutral-900/80 border border-neutral-900/15",
-			"hover:bg-neutral-900/20 ",
-			"pressed:bg-white ",
-			"disabled:text-neutral-900/15 disabled:bg-white disabled:border-neutral-900/15",
-			"outline-neutral-900/25 dark:outline-neutral-900/25"
+			'secondary-brand': [
+				"bg-white text-neutral-900/80 border border-neutral-900/15",
+				"hover:bg-neutral-900/20 ",
+				"pressed:bg-white ",
+				"disabled:text-neutral-900/15 disabled:bg-white disabled:border-neutral-900/15",
+				"outline-neutral-900/25 dark:outline-neutral-900/25"
 
 			],
-			tertiary: [
-			"bg-white text-neutral-900/80",
-			"hover:bg-neutral-900/10",
-			"pressed:bg-white ",
-			"disabled:text-neutral-900/15 disabled:bg-white",
-			"outline-neutral-900/10 dark:outline-neutral-900/10"
+			'tertiary-brand': [
+				"bg-white text-neutral-900/80",
+				"hover:bg-neutral-900/10",
+				"pressed:bg-white ",
+				"disabled:text-neutral-900/15 disabled:bg-white",
+				"outline-neutral-900/10 dark:outline-neutral-900/10"
 
 			],
-			link: [
-			"bg- text-",
-			"pressed:bg- ",
-			"hover: hover:",
-			"disabled:text disabled:bg-",
-			"outline- dark:outline-"
+			'link-brand': [
+				"bg-white text-brand-600 p-0",
+				"hover: hover:text-brand-800",
+				"pressed:text-brand-700 ",
+				"disabled:text-neutral-900/15 disabled:bg-white",
+				"outline-none dark:outline-"
 			],
 
-			icon: 'flex items-center justify-center border-0 pressed:bg-black/10 p-1 text-neutral-600 hover:bg-black/[5%] disabled:bg-transparent dark:pressed:bg-white/20 dark:text-secondary-400 dark:hover:bg-white/10',
+			'icon-brand': 'flex items-center justify-center border-0 pressed:bg-black/10 p-1 text-neutral-600 hover:bg-black/[5%] disabled:bg-transparent dark:pressed:bg-white/20 dark:text-secondary-400 dark:hover:bg-white/10',
+
+			'primary-error': [
+				"bg-error-600 text-white",
+				"hover:bg-error-700",
+				"pressed:bg-error-800 ",
+				"disabled:text-white disabled:bg-neutral-900/5",
+				"outline-error-500/25 dark:outline-error-500/25"
+			],
+			'secondary-error': [
+				"bg-white text-error-600 border border-error-50",
+				"hover:bg-error-50 hover:text-error-700",
+				"pressed:bg-white ",
+				"disabled:text-neutral-900/15 disabled:bg-white disabled:border-neutral-900/15",
+				"outline-error-50 dark:outline-error-50"
+
+			],
+			'tertiary-error': [
+				"bg-white text-error-600",
+				"hover:bg-error-50",
+				"pressed:bg-white ",
+				"disabled:text-neutral-900/15 disabled:bg-white",
+				"outline-error-50 dark:outline-error-50"
+
+			],
+			'link-error': [
+				"bg-white text-error-600 p-0",
+				"hover:text-error-800 ",
+				"pressed:bg-white text-error-700 ",
+				"disabled:text-neutral-900/15 disabled:bg-white",
+				"outline-none dark:outline-"
+			],
+
+			'icon-error': 'flex items-center justify-center border-0 pressed:bg-black/10 p-1 text-neutral-600 hover:bg-black/[5%] disabled:bg-transparent dark:pressed:bg-white/20 dark:text-secondary-400 dark:hover:bg-white/10',
 			
+			'link-neutral': [
+				"bg-white text-neutral-900/90 p-0",
+				"hover:text-neutral-900/80 ",
+				"pressed:bg-white text-neutral-900/90 ",
+				"disabled:text-neutral-900/15 disabled:bg-white",
+				"outline-none dark:outline-"
+			],
+
+
 		}
-
-
 	},
 	defaultVariants: {
-		variant: 'primary',
+		variant: 'primary-brand',
 	},
-	// customStyle: ({ theme:any }) => {
-	// 	const themeMap = {
-	// 	  brand: {
-	// 		'--primary-bg': 'brand-600',
-	// 		'--primary-bg-hover': 'brand-700',
-	// 		'--primary-bg-pressed': 'brand-800',
-	// 		'--primary-bg-outline': 'brand-500/25',
-	// 		'--primary-bg-outline-dark': 'brand-500/25',
-	// 	  },
-	// 	  neutral: {
-	// 		'--primary-bg': 'neutral-900',
-	// 		'--primary-bg-hover': 'neutral-900/20',
-	// 		'--primary-bg-pressed': 'neutral-900/30',
-	// 		'--primary-bg-outline': 'neutral-900/25',
-	// 		'--primary-bg-outline-dark': 'neutral-900/25',
-	// 	  },
-	// 	  destructive: {
-	// 		'--primary-bg': 'error-600',
-	// 		'--primary-bg-hover': 'error-700',
-	// 		'--primary-bg-pressed': 'error-800',
-	// 		'--primary-bg-outline': 'error-500/25',
-	// 		'--primary-bg-outline-dark': 'error-500/25',
-	// 	  },
-	// 	};
-	
-	// 	const selectedTheme = themeMap[theme] || themeMap.brand; // Default to 'brand' if color is missing
-	// 	return selectedTheme;
-	//   },
-	});
+});
 
 	
 
@@ -100,10 +112,13 @@ export function Button(props: ButtonProps) {
 			className={composeRenderProps(props.className, (className, renderProps) =>
 				button({
 					isFocusVisible: renderProps.isFocusVisible || renderProps.isPressed,
-					variant: props.variant,
+					variant: `${props.variant}-${props.theme}`,
 					className,
 				}),
 			)}
 		/>
 	);
 }
+
+
+			
