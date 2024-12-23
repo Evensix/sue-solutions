@@ -1,10 +1,10 @@
 import type { Meta } from '@storybook/react';
 import { Form } from 'react-aria-components';
 import { Button } from './Button.tsx';
-import { SearchField } from './SearchField.tsx';
+import { SearchField } from './SearchBar.tsx';
 
 const meta: Meta<typeof SearchField> = {
-	title: 'atom/Forms/SearchField',
+	title: 'atom/SearchBar',
 	component: SearchField,
 	parameters: {
 		layout: 'centered',

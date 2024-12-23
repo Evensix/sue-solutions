@@ -4,7 +4,7 @@ import { TableBody } from 'react-aria-components';
 import { Cell, Column, Row, Table, TableHeader } from './Table.tsx';
 
 const meta: Meta<typeof Table> = {
-	title: 'aria/Collections/Table',
+	title: 'molecule/Collections/Table',
 	component: Table,
 	parameters: {
 		layout: 'centered',

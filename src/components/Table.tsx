@@ -25,8 +25,8 @@ import { composeTailwindRenderProps, focusRing } from './utils.ts';
 
 export function Table(props: TableProps) {
   return (
-    <ResizableTableContainer className="max-h-[280px] w-[550px] overflow-auto scroll-pt-[2.281rem] relative border dark:border-secondary-600 rounded-lg">
-      <AriaTable {...props} className="border-separate border-spacing-0" />
+    <ResizableTableContainer className="max-h-[280px] w-[550px] overflow-auto scroll-pt-[2.281rem] relative rounded-8">
+      <AriaTable {...props} className="border-separate border-spacing-0 " />
     </ResizableTableContainer>
   );
 }
@@ -73,11 +73,11 @@ export function TableHeader<T extends object>(props: TableHeaderProps<T>) {
   let { selectionBehavior, selectionMode, allowsDragging } = useTableOptions();
 
   return (
-    <AriaTableHeader {...props} className={composeTailwindRenderProps(props.className, 'sticky top-0 z-10 bg-neutral-100/60 dark:bg-secondary-700/60 backdrop-blur-md supports-[-moz-appearance:none]:bg-neutral-100 dark:supports-[-moz-appearance:none]:bg-secondary-700 forced-colors:bg-[Canvas] rounded-t-lg border-b dark:border-b-secondary-700')}>
+    <AriaTableHeader {...props} className={composeTailwindRenderProps(props.className, 'sticky top-0 z-10 bg-neutral-900/5 dark:bg-secondary-700/60 backdrop-blur-md supports-[-moz-appearance:none]:bg-neutral-100 dark:supports-[-moz-appearance:none]:bg-secondary-700 forced-colors:bg-[Canvas] border-neutral-900/20 dark:border-b-secondary-700')}>
       {/* Add extra columns for drag and drop and selection. */}
       {allowsDragging && <Column />}
       {selectionBehavior === 'toggle' && (
-        <AriaColumn width={36} minWidth={36} className="text-start text-sm font-semibold cursor-default p-2">
+        <AriaColumn width={36} minWidth={36} className="text-start text-sm font-semibold cursor-default py-20 px-8">
           {selectionMode === 'multiple' && <Checkbox slot="selection" />}
         </AriaColumn>
       )}
@@ -90,7 +90,12 @@ export function TableHeader<T extends object>(props: TableHeaderProps<T>) {
 
 const rowStyles = tv({
   extend: focusRing,
-  base: 'group/row relative cursor-default select-none -outline-offset-2 text-neutral-900 disabled:text-neutral-300 dark:text-secondary-200 dark:disabled:text-secondary-600 text-sm hover:bg-neutral-100 dark:hover:bg-secondary-700/60 selected:bg-purple-100 selected:hover:bg-purple-200 dark:selected:bg-purple-700/30 dark:selected:hover:bg-purple-700/40'
+  base: [
+    'group/row relative cursor-default select-none -outline-offset-2 text-neutral-900 text-14 ',
+    'disabled:text-neutral-300',
+    'dark:text-secondary-200 dark:disabled:text-secondary-600',
+    'hover:bg-neutral-100 dark:hover:bg-secondary-700/60',
+    'selected:bg-purple-100 selected:hover:bg-purple-200 dark:selected:bg-purple-700/30 dark:selected:hover:bg-purple-700/40']
 });
 
 export function Row<T extends object>(
@@ -119,7 +124,10 @@ export function Row<T extends object>(
 
 const cellStyles = tv({
   extend: focusRing,
-  base: 'border-b dark:border-b-secondary-700 group-last/row:border-b-0 [--selected-border:theme(colors.blue.200)] dark:[--selected-border:theme(colors.blue.900)] group-selected/row:border-[--selected-border] [:has(+[data-selected])_&]:border-[--selected-border] p-2 truncate -outline-offset-2'
+  base: [
+    ' dark:border-b-secondary-700 group-last/row:border-b-0 p-8 truncate -outline-offset-2',
+    '[--selected-border:theme(colors.blue.200)] dark:[--selected-border:theme(colors.blue.900)] group-selected/row:border-[--selected-border]',
+    '[:has(+[data-selected])_&]:border-[--selected-border] ']
 });
 
 export function Cell(props: CellProps) {
