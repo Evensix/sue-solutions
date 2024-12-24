@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react';
 import { MetaChip, MetaChipGroup } from './MetaChipGroup.tsx';
+import { CircleIcon } from 'lucide-react';
 
 const meta: Meta<typeof Example> = {
 	title: 'atom/Collections/MetaChipGroup',
@@ -14,10 +15,10 @@ export default meta;
 
 export const Example = (args: any) => (
 	<MetaChipGroup {...args}>
-		<MetaChip>Chocolate</MetaChip>
-		<MetaChip>Mint</MetaChip>
-		<MetaChip>Strawberry</MetaChip>
-		<MetaChip>Vanilla</MetaChip>
+		<MetaChip>{<CircleIcon height={12} width={12}/>} Chocolate</MetaChip>
+		<MetaChip>{<CircleIcon height={12} width={12}/>} Mint</MetaChip>
+		<MetaChip>{<CircleIcon height={12} width={12}/>} Strawberry</MetaChip>
+		<MetaChip>{<CircleIcon height={12} width={12}/>} Vanilla</MetaChip>
 	</MetaChipGroup>
 );
 

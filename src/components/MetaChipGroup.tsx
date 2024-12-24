@@ -24,7 +24,7 @@ export function MetaChipGroup<T extends object>(
 ) {
   return (
     <AriaTagGroup {...props} className={twMerge('flex flex-col  ', props.className)}>
-        <TagList items={items} className={`flex flex-wrap justify-center align-middle  [&>*:not(:last-child)]:after:content-['•']  [&>*:not(:last-child)]:after:px-[20px] `} >
+        <TagList items={items} className={`flex flex-wrap justify-center align-middle  [&>*:not(:last-child)]:after:content-['•']  [&>*:not(:last-child)]:after:px-[6px] `} >
           {children}
         </TagList>
     </AriaTagGroup>
@@ -36,11 +36,10 @@ export function MetaChip({ children, ...props }: AriaTagProps) {
   return (
     <AriaTag
       {...props}
-      className={'flex gap-4 svg-fill-nutral-600 text-neutral-600 dark:text-secondary-200'}>
-         <Circle/>
-        <span>
+      style={{alignItems: 'center', justifyContent: 'center'}}
+      className={'flex svg-fill-nutral-600 text-neutral-600 dark:text-secondary-200 text-12 justify-center align-middle gap-2'}>
+         
           {children}
-        </span>
     </AriaTag>
   );
 }
