@@ -1,7 +1,7 @@
 import { Checkbox } from './Checkbox.tsx';
 
 export default {
-	title: 'aria/Forms/Checkbox',
+	title: 'atom/Forms/Checkbox',
 	component: Checkbox,
 	parameters: {
 		layout: 'centered',

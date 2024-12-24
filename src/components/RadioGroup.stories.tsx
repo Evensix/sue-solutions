@@ -3,7 +3,7 @@ import { Button } from './Button.tsx';
 import { Radio, RadioGroup } from './RadioGroup.tsx';
 
 export default {
-	title: 'aria/Forms/RadioGroup',
+	title: 'atom/Forms/RadioGroup',
 	component: RadioGroup,
 	parameters: {
 		layout: 'centered',
@@ -11,10 +11,8 @@ export default {
 	tags: ['autodocs'],
 	argTypes: {},
 	args: {
-		label: 'Favorite sport',
 		isDisabled: false,
 		isRequired: false,
-		description: '',
 		children: (
 			<>
 				<Radio value="soccer">Soccer</Radio>
