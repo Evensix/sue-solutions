@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Switch } from './Switch.tsx';
 
 const meta: Meta<typeof Switch> = {
-	title: 'aria/Forms/Switch',
+	title: 'atom/Forms/toggle',
 	component: Switch,
 	parameters: {
 		layout: 'centered',

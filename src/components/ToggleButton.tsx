@@ -2,9 +2,9 @@ import { ToggleButton as RACToggleButton, ToggleButtonProps, composeRenderProps 
 import { tv } from 'tailwind-variants';
 import { focusRing } from './utils.ts';
 
-let styles = tv({
+const styles = tv({
   extend: focusRing,
-  base: 'px-5 py-2 [&:has(svg:only-child)]:px-2 text-sm text-center transition rounded-lg border border-black/10 dark:border-white/10 forced-colors:border-[ButtonBorder] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] dark:shadow-none cursor-default forced-color-adjust-none',
+  base: 'px-20 py-8 [&:has(svg:only-child)]:px-8 text-sm text-center transition rounded-full border border-black/10 dark:border-white/10 forced-colors:border-[ButtonBorder] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] dark:shadow-none cursor-default forced-color-adjust-none',
   variants: {
     isSelected: {
       false: 'bg-neutral-100 hover:bg-neutral-200 pressed:bg-neutral-300 text-neutral-800 dark:bg-secondary-600 dark:hover:bg-secondary-500 dark:pressed:bg-secondary-400 dark:text-secondary-100 forced-colors:!bg-[ButtonFace] forced-colors:!text-[ButtonText]',
