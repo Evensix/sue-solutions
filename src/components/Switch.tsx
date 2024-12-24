@@ -7,7 +7,7 @@ import { tv } from 'tailwind-variants';
 import { composeTailwindRenderProps, focusRing } from './utils.ts';
 
 export interface SwitchProps extends Omit<AriaSwitchProps, 'children'> {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const track = tv({

@@ -2,6 +2,7 @@ import InputWrapper from "./InputWrapper";
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Select, SelectItem } from "./Select";
+import { Switch } from "./Switch";
 
 
 const meta = {
@@ -22,8 +23,8 @@ type Story = StoryObj<typeof meta>;
 
 
 
-export const Basic: Story = {
-  name: "Basic",
+export const SelectInput: Story = {
+  name: "Select Input",
   args: {
     example: "Example text if needed",
     label: "Label",
@@ -35,6 +36,20 @@ export const Basic: Story = {
     <SelectItem>Strawberry</SelectItem>
     <SelectItem>Vanilla</SelectItem>
     </Select>,
+  },
+};
+
+
+export const ToggleInput: Story = {
+  name: "Toggle Input",
+  args: {
+    label: "Label",
+    labelFor: 'basic',
+    hint: "Hint",
+    inputPosition: "right",
+    children: 
+    <Switch />
+    ,
   },
 };
 
