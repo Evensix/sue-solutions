@@ -19,6 +19,6 @@ export const Full = {
 
 export const Mini = {
 	args: {
-		size: "mini",
+		mini:true,
 	},
 };

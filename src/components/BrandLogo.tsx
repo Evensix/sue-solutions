@@ -4,11 +4,11 @@ import MiniLogo from "../assets/SueBrandMini.svg";
 import Logo from "../assets/SueBrand.svg";
 
 type Props = {
-  size?: "mini" | "full";
+  mini?: boolean;
 };
 
-const BrandLogo: FC<Props> = ({ size = "full" }) => {
-  if (size === "mini") {
+const BrandLogo: FC<Props> = ({ mini = false }) => {
+  if (mini) {
     return (
       <img src={MiniLogo} alt="Mini Logo" />
     );
