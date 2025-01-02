@@ -20,7 +20,7 @@ export function Label(props: LabelProps) {
 		<RACLabel
 			{...props}
 			className={twMerge(
-				'w-fit cursor-default font-medium text-neutral-500 text-sm dark:text-secondary-400',
+				'w-fit cursor-default ',
 				props.className,
 			)}
 		/>

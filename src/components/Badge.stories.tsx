@@ -18,7 +18,7 @@ export default {
 		},
 		size: {
 			control: 'select',
-			options: ['xxsmall', 'xsmall', 'small', 'medium', 'large'],
+			options: ['xxsmall', 'xsmall', 'small', 'medium'],
 		},
 	},
 	args: {
@@ -27,6 +27,7 @@ export default {
 };
 
 export const Primary = {
+	name: 'Badge-Colour',
 	args: {
 		type: 'badge-color',
 		color: 'brand',
@@ -34,6 +35,7 @@ export const Primary = {
 };
 
 export const Secondary = {
+	name: 'Pill',
 	args: {
 		type: 'pill',
 		color: 'brand',
@@ -41,13 +43,15 @@ export const Secondary = {
 };
 
 export const Tertiary = {
+	name: 'Ghost',
 	args: {
 		type: 'ghost',
 		color: 'brand',
 	},
 };
 
-export const Link = {
+export const Quaternary = {
+	name: 'Badge',
 	args: {
 		type: 'badge',
 		color: 'brand',

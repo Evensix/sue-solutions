@@ -155,11 +155,11 @@ module.exports = {
 
 		
 		fontSize: {
-			56: ['3.5rem', { lineHeight: '4.25rem'} ],
-			48: ['3rem', { lineHeight: '3.5rem'} ],
-			40: ['2.5rem', { lineHeight: '3rem'} ],
-			32: ['2rem', { lineHeight: '2.5rem'} ],
-			24: ['1.5rem', { lineHeight: '2rem'} ],
+			56: ['3.5rem', { lineHeight: '4.25rem', letterSpacing: '-0.02em'} ],
+			48: ['3rem', { lineHeight: '3.5rem', letterSpacing: '-0.02em'} ],
+			40: ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.02em'} ],
+			32: ['2rem', { lineHeight: '2.5rem', letterSpacing: '-0.02em'} ],
+			24: ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.01em'} ],
 			20: ['1.25rem', { lineHeight: '1.875rem'} ],
 			18: ['1.125rem', { lineHeight: '1.75rem'} ],
 			16: ['1rem', { lineHeight: '1.5rem'} ],

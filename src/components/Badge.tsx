@@ -6,18 +6,17 @@ export interface BadgeProps {
   className?: string;
   type?: "badge" | "badge-color" | "pill" | "ghost";
   color?: "brand" | "error" | "neutral";
-  size?: "xxsmall" | "xsmall" | "small" | "medium" | "large";
+  size?: "xxsmall" | "xsmall" | "small" | "medium" ;
 }
 
 const badge = tv({
-  base: "cursor-default select-none inline-flex p-[1px] gap-2 text-center transition",
+  base: "cursor-default select-none inline-flex  gap-2 text-center transition",
   variants: {
     size: {
-      xxsmall: "  [& * svg]:h-10  p-2",
-      xsmall: "  [& * svg]:h-10  p-4",
-      small: "  [& * svg]:h-20  p-6",
-      medium: "  [& * svg]:h-20  p-8",
-      large: "  [& * svg]:h-20  p-10",
+      xxsmall: "text-11 px-6 py-1",
+      xsmall: " text-12 px-6 py-1",
+      small: "  text-14 px-8 py-2",
+      medium: " text-14 px-10 py-4",
     },
     type: {
       "badge-color": " rounded-6 ",
