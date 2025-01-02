@@ -1,6 +1,7 @@
 import { Button as RACButton, type ButtonProps as RACButtonProps, composeRenderProps } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
 import { focusRing } from './utils.ts';
+import { FC } from 'react';
 
 export interface ButtonProps extends RACButtonProps {
 	variant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'link';
@@ -85,7 +86,11 @@ const button = tv({
 			],
 
 			'icon-error': 'flex items-center justify-center border-0 pressed:bg-black/10 p-1 text-neutral-600 hover:bg-black/[5%] disabled:bg-transparent dark:pressed:bg-white/20 dark:text-secondary-400 dark:hover:bg-white/10',
-			
+			'primary-neutral': [],
+			'secondary-neutral': [],
+			'tertiary-neutral': [],
+			'icon-neutral': [],
+
 			'link-neutral': [
 				"bg-white text-neutral-900/90 p-0",
 				"hover:text-neutral-900/80 ",
@@ -93,7 +98,7 @@ const button = tv({
 				"disabled:text-neutral-900/15 disabled:bg-white",
 				"outline-none dark:outline-"
 			],
-
+	
 
 		}
 	},
@@ -105,14 +110,14 @@ const button = tv({
 	
 
 
-export function Button(props: ButtonProps) {
+export const Button:FC<ButtonProps> = ({variant='primary', theme='brand' ,...props}) => {
 	return (
 		<RACButton
 			{...props}
 			className={composeRenderProps(props.className, (className, renderProps) =>
 				button({
 					isFocusVisible: renderProps.isFocusVisible || renderProps.isPressed,
-					variant: `${props.variant}-${props.theme}`,
+					variant: `${variant}-${theme}`,
 					className,
 				}),
 			)}
