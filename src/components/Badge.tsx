@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { tv } from "tailwind-variants";
+import { StyledText, textSizeArray } from "../stories/StyledText.tsx";
 import { Label } from "./Field.tsx";
 
 export interface BadgeProps {
@@ -13,10 +14,10 @@ const badge = tv({
   base: "cursor-default select-none inline-flex  gap-2 text-center transition",
   variants: {
     size: {
-      xxsmall: "text-11 px-6 py-1",
-      xsmall: " text-12 px-6 py-1",
-      small: "  text-14 px-8 py-2",
-      medium: " text-14 px-10 py-4",
+      xxsmall: " px-6 py-1",
+      xsmall:  " px-6 py-1",
+      small:   " px-8 py-2",
+      medium:  " px-10 py-4",
     },
     type: {
       "badge-color": " rounded-6 ",
@@ -73,6 +74,13 @@ const badge = tv({
 });
 
 export const Badge: FC<BadgeProps> = (props) => {
+	const textSizeMap = {
+		xxsmall: 11,
+		xsmall: 12,
+		small: 12,
+		medium: 14,
+	};
+	
   return (
     <Label
       {...props}
@@ -81,6 +89,9 @@ export const Badge: FC<BadgeProps> = (props) => {
         type: props.type,
         size: props.size,
       })}
-    />
+    >
+		<StyledText as="span" size={textSizeMap[props.size||"medium"] as textSizeArray} weight="regular" >{props.children}</StyledText>
+	</Label>
+
   );
 };

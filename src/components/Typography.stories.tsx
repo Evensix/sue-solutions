@@ -1,3 +1,4 @@
+import { textSizeArray, textWeightArray } from "../stories/StyledText";
 import StyledText from "./StyledText";
 
 export default {
@@ -17,10 +18,10 @@ export const Headings = function () {
 						{weightArray.map((weight) => {
 							return (
 								<div className="mb-[1rem] flex flex-col">
-									<StyledText as="span"  size={size} weight={weight} >Size {size}</StyledText>
-									<StyledText as="span"  size={size} weight={weight} >{weight}</StyledText>
-									<StyledText as="span"  size={size} weight={weight} italic='italic' > Italic </StyledText>
-									<StyledText as="span" size={size} weight={weight} decoration="underline"> Underline </StyledText>
+									<StyledText as="span"  size={size as textSizeArray} weight={weight as textWeightArray} >Size {size}</StyledText>
+									<StyledText as="span"  size={size as textSizeArray} weight={weight as textWeightArray} >{weight}</StyledText>
+									<StyledText as="span"  size={size as textSizeArray} weight={weight as textWeightArray} italic='italic' > Italic </StyledText>
+									<StyledText as="span" size={size as textSizeArray} weight={weight as textWeightArray} decoration="underline"> Underline </StyledText>
 								</div>
 							)
 						})}

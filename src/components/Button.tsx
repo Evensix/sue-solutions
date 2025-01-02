@@ -2,6 +2,8 @@ import { Button as RACButton, type ButtonProps as RACButtonProps, composeRenderP
 import { tv } from 'tailwind-variants';
 import { focusRing } from './utils.ts';
 import { FC } from 'react';
+import { StyledText, textSizeArray } from '../stories/StyledText.tsx';
+import { Large } from '../stories/Button.stories.ts';
 
 export interface ButtonProps extends RACButtonProps {
 	variant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'link';
@@ -11,14 +13,14 @@ export interface ButtonProps extends RACButtonProps {
 
 const button = tv({
 	extend: focusRing,
-	base: 'cursor-default select-none rounded-6 px-12 py-6 text-center transition',
+	base: 'cursor-default select-none rounded-6  text-center transition',
 	variants  : {
 		size: {
-			xxsmall: " h-20 [& * svg]:h-10  p-2",
-			xsmall:  " h-20 [& * svg]:h-10  p-4",
-			small:   " h-20 [& * svg]:h-20  p-6",
-			medium:  " h-20 [& * svg]:h-20  p-8",
-			large:   " h-20 [& * svg]:h-20  p-10",
+			xxsmall: " px-8 py-[3px]",
+			xsmall:  " px-8 py-4",
+			small:   " px-12 py-4",
+			medium:  " px-[14px] py-8",
+			large:   " px-[14px] py-8",
 		},
 		variant : {
 			'primary-brand': [
@@ -110,7 +112,14 @@ const button = tv({
 	
 
 
-export const Button:FC<ButtonProps> = ({variant='primary', theme='brand' ,...props}) => {
+export const Button:FC<ButtonProps> = ({variant='primary', theme='brand' , children, ...props}) => {
+	const textSizeMap = {
+		xxsmall: 12,
+		xsmall: 12,
+		small: 14,
+		medium: 14,
+		large: 16,
+	};
 	return (
 		<RACButton
 			{...props}
@@ -118,10 +127,13 @@ export const Button:FC<ButtonProps> = ({variant='primary', theme='brand' ,...pro
 				button({
 					isFocusVisible: renderProps.isFocusVisible || renderProps.isPressed,
 					variant: `${variant}-${theme}`,
+					size: props.size,
 					className,
 				}),
 			)}
-		/>
+		>
+			<StyledText as="span" size={textSizeMap[props.size||"medium"] as textSizeArray} weight="regular" >{children}</StyledText>
+		</RACButton>
 	);
 }
 

@@ -1,5 +1,7 @@
 import {tv, type VariantProps} from "tailwind-variants";
 import React, {ComponentProps, ReactNode} from "react";
+export type textSizeArray = 56 | 48 | 40 | 32 | 24 | 20 | 18 | 16 | 14 | 12 | 11 | 10;
+export type textWeightArray = 'regular' | 'medium' | 'semibold';
 const styles = tv({
     base: '',
     variants: {
@@ -7,17 +9,18 @@ const styles = tv({
             jakarta: "font-plus-jakarta-sans",
         },
         size: {
-            56: "font-56 tracking-tighter",
-            48: "font-48 tracking-tighter",
-            40: "font-40 tracking-tighter",
-            32: "font-32 tracking-tighter",
-            24: "font-24 tracking-tighter",
-            20: "font-20",
-            18: "font-18",
-            16: "font-16",
-            14: "font-14",
-            12: "font-12",
-            10: "font-10",
+            56: "text-56 tracking-tighter",
+            48: "text-48 tracking-tighter",
+            40: "text-40 tracking-tighter",
+            32: "text-32 tracking-tighter",
+            24: "text-24 tracking-tighter",
+            20: "text-20",
+            18: "text-18",
+            16: "text-16",
+            14: "text-14",
+            12: "text-12",
+            11: "text-11",
+            10: "text-10",
         },
         weight: {
             regular: "font-normal",

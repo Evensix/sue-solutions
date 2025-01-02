@@ -140,6 +140,11 @@ module.exports = {
 	content: ['./src/**/*.{ts,tsx}'],
 	darkMode: ['class', '[data-mode="dark"]'],
 	theme: {
+
+		textColor: {
+			...colors,
+		},
+
 		fontFamily: {
 			sans: [
 				'Plus Jakarta Sans',
@@ -168,6 +173,7 @@ module.exports = {
 			11: ['0.68rem', { lineHeight: '1rem'} ],
 			10: ['0.625rem', { lineHeight: '1rem'} ],
 		},
+
 
 		borderRadius: {
 			0: '0px',
@@ -264,3 +270,4 @@ module.exports = {
 	},
 	plugins: [require('tailwindcss-react-aria-components'), require('tailwindcss-animate')],
 };
+
