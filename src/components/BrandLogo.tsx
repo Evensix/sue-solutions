@@ -12,7 +12,7 @@ const BrandLogo: FC<Props> = ({ size = "full" }) => {
     return (
       <img src={MiniLogo} alt="Mini Logo" />
     );
-  }
+  } else
   return (
     <img src={Logo} alt="Full Logo" />
   );
