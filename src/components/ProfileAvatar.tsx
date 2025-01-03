@@ -21,7 +21,7 @@ const AvatarProfile: FC<AvatarProfileProps> = ({
     16: "h-16 w-16",
     20: "h-20 w-20",
     24: "h-24 w-24",
-    28: "h-28 w-28",
+    28: "h-[28px] w-[28px]",
     32: "h-32 w-32",
     40: "h-40 w-40",
     48: "h-48 w-48",
@@ -29,7 +29,7 @@ const AvatarProfile: FC<AvatarProfileProps> = ({
     64: "h-64 w-64",
     72: "h-72 w-72",
     96: "h-96 w-96",
-    120: "h-120 w-120",
+    120: "h-[120px] w-[120px]",
   };
   const shapeMap = {
     circle: "rounded-full",

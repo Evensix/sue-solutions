@@ -10,7 +10,19 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
   },
-  args: {},
+  args: {
+  },
+  argTypes: {
+		shape: {
+			control: 'select',
+			options: ['circle', 'square'],
+		},
+		size: {
+			control: 'select',
+			options: [12 , 14 , 16 , 20 , 24 , 28 , 32 , 40 , 48 , 56 , 64 , 72 , 96 , 120],
+      
+		},
+	},
 } satisfies Meta<typeof AvatarProfile>;
 
 export default meta;
