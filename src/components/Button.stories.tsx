@@ -1,3 +1,4 @@
+import { fn } from '@storybook/test';
 import { Button } from './Button.tsx';
 
 export default {
@@ -24,6 +25,7 @@ export default {
 	args: {
 		isDisabled: false,
 		children: 'Button',
+		onClick: fn(() => {console.log('Clicked')})
 	},
 };
 

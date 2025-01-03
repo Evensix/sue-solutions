@@ -22,7 +22,7 @@ const tabsStyles = tv({
   }
 });
 
-export function Tabs(props: TabsProps) {
+export function Tabs(props: TabsProps & { type?: 'button' | 'underline', size?: 'small' | 'medium' }) {
   return (
     <RACTabs
       {...props}
@@ -51,7 +51,7 @@ export type TabListProps = {
   background?: boolean;
 }
 
-export function TabList<T extends object>(props: TabListProps & RACTabListProps<T>) {
+export function TabList<T extends object>(props: TabListProps & RACTabListProps<T> & { type?: 'button' | 'underline', size?: 'small' | 'medium' } ) {
   return (
     <RACTabList
       {...props}
@@ -64,24 +64,45 @@ export function TabList<T extends object>(props: TabListProps & RACTabListProps<
 
 const tabProps = tv({
   extend: focusRing,
-  base: 'flex items-center cursor-default rounded-full px-4 py-1.5 text-sm font-medium transition forced-color-adjust-none',
+  base: 'flex items-center cursor-default text-sm font-medium transition forced-color-adjust-none',
   variants: {
     type: {
-      button: '',
-      underline: '',
+      button: ['rounded-6 bg-white dark:bg-neutral-900/50 dark:text-white forced-colors:bg-[ButtonFace] forced-colors:text-[ButtonText]',
+				"hover:bg-neutral-900/10 dark:hover:bg-secondary-700",
+        "outline-neutral-900/10 dark:outline-error-50",
+        "selected:shadow-sm dark:selected:bg-neutral-900/70  dark:shadow-md selected:hover:bg-white",
+
+
+      ],
+      underline:[ 'rounded-0 border-b-2 border-transparent bg-white dark:bg-neutral-900/50 dark:text-white forced-colors:bg-[ButtonFace] forced-colors:text-[ButtonText]',
+				"hover:bg-neutral-900/10 dark:hover:bg-secondary-700",
+				"outline-neutral-900/10 dark:outline-error-50",
+        "selected:border-brand-600 dark:selected:border-brand-400 dark:selected:border-brand-600  ",
+
+      ],
     },
     size: {
-      small: '',
-      medium: '',
-    },
-    isSelected: {
-      false: 'text-neutral-600 dark:text-secondary-300 hover:text-neutral-700 pressed:text-neutral-700 dark:hover:text-secondary-200 dark:pressed:text-secondary-200 hover:bg-neutral-200 dark:hover:bg-secondary-800 pressed:bg-neutral-200 dark:pressed:bg-secondary-800',
-      true: 'text-white dark:text-black forced-colors:text-[HighlightText] bg-neutral-800 dark:bg-secondary-200 forced-colors:bg-[Highlight]'
+      small: 'px-8 py-4',
+      medium: 'px-10 py-8',
     },
     isDisabled: {
       true: 'text-neutral-200 dark:text-secondary-600 forced-colors:text-[GrayText] selected:text-neutral-300 dark:selected:text-secondary-500 forced-colors:selected:text-[HighlightText] selected:bg-neutral-200 dark:selected:bg-secondary-600 forced-colors:selected:bg-[GrayText]'
     }
-  }
+  },
+  compoundVariants: [
+
+    {
+      type: 'underline',
+      size: 'small',
+      class: 'px-6 py-6'
+    },
+    {
+      type: 'underline',
+      size: 'medium',
+      class: 'px-8 py-8'
+    }
+    
+  ]
 });
 
 export type TabProps = RACTabProps & {
