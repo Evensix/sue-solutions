@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import StyledText from "./StyledText";
-import { twMerge as cn} from "tailwind-merge";
+import { twMerge as cn } from "tailwind-merge";
 
 interface AvatarProfileProps {
   avatars: string[];
@@ -36,46 +36,36 @@ const AvatarProfile: FC<AvatarProfileProps> = ({
     square: "rounded-8",
   };
   return (
-    <div className="relative">
+    <div className="relative ">
       {avatars.slice(0, 3).map((avatar, index) => (
-        <div>
-          <div
-            style={{ zIndex: index, left: index * 20 }}
-            className={cn(
-              "top-0 absolute overflow-hidden flex p-0 ",
-              sizeMap[size],
-              shapeMap[shape]
-            )}
-          >
-            <div
-              className={cn(
-                " absolute  bg-transparent border-[1px] border-black/10 z-40 overflow-hidden",
-                sizeMap[size],
-                shapeMap[shape]
-              )}
-            />
-            <img
-              src={avatar}
-              alt="avatar"
-              className="h-full w-full object-cover"
-            />
+        <div
+          style={{ zIndex: index,
+            left: index * size/2,
+            mask:avatars.length - 1 !== index
+              ? `radial-gradient(circle at ${size - Math.min(size/16 , 5)}px, transparent ${size/2 }px, white 0)`
+              : "",}}
+          className={cn(
+            sizeMap[size],
+            shapeMap[shape],
+            "absolute overflow-hidden flex p-0"
+          )}
+        >
+          <img
+            src={avatar}
+            alt="avatar"
+            className=" object-cover"
+          />
+          <span className={cn(
+            sizeMap[size],
+            shapeMap[shape],
+            "absolute flex p-0 z-10 bg-transparent border-2 border-black/10"
+          )} />
 
-            {avatars.length - 1 !== index && (
-              <div
-                style={{ width: size + 2, height: size + 2 }}
-                className={cn(
-                  "absolute -top-[1px] left-[18px] bg-white z-50",
-                  shapeMap[shape]
-                )}
-              />
-            )}
-
-          </div>
         </div>
       ))}
       {avatars.length > 3 && (
         <div
-          style={{left: 60}}
+          style={{ left: 60 }}
           className={cn(
             "absolute z-50 top-0 overflow-hidden flex p-0 bg-success-500 justify-center items-center",
             sizeMap[size],
