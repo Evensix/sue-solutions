@@ -58,7 +58,7 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
           className="cursor-pointer"
           onClick={() => setIsExampleOpen(!isExampleOpen)}
         >
-          <span className="regular-14"> Example .{/* {isExampleOpen } */}</span>
+          <span className="regular-14"> Example  {isExampleOpen ? "⌃" : "⌄" } </span>
           <p className="regular-14">{isExampleOpen && example}</p>
         </div>
       )}

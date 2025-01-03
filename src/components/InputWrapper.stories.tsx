@@ -3,6 +3,7 @@ import InputWrapper from "./InputWrapper";
 import type { Meta, StoryObj } from '@storybook/react';
 import { Select, SelectItem } from "./Select";
 import { Switch } from "./Switch";
+import InputField from "./InputField";
 
 
 const meta = {
@@ -49,6 +50,21 @@ export const ToggleInput: Story = {
     inputPosition: "right",
     children: 
     <Switch />
+    ,
+  },
+};
+
+
+
+export const TextInput: Story = {
+  name: "Text Input",
+  args: {
+    example: "Example text if needed",
+    label: "Label",
+    labelFor: 'basic',
+    hint: "Hint",
+    children: 
+    <InputField name='example'/>
     ,
   },
 };

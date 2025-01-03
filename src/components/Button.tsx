@@ -1,9 +1,8 @@
+import { FC } from 'react';
 import { Button as RACButton, type ButtonProps as RACButtonProps, composeRenderProps } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { focusRing } from './utils.ts';
-import { FC } from 'react';
 import { StyledText, textSizeArray } from '../stories/StyledText.tsx';
-import { Large } from '../stories/Button.stories.ts';
+import { focusRing } from './utils.ts';
 
 export interface ButtonProps extends RACButtonProps {
 	variant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'link';
@@ -106,6 +105,7 @@ const button = tv({
 	},
 	defaultVariants: {
 		variant: 'primary-brand',
+		size: 'medium',
 	},
 });
 
