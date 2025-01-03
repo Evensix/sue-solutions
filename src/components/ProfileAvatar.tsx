@@ -21,7 +21,7 @@ const AvatarProfile: FC<AvatarProfileProps> = ({
     16: "h-16 w-16",
     20: "h-20 w-20",
     24: "h-24 w-24",
-    28: "h-[28px] w-[28px]",
+    28: "h-28 w-28",
     32: "h-32 w-32",
     40: "h-40 w-40",
     48: "h-48 w-48",
@@ -29,7 +29,7 @@ const AvatarProfile: FC<AvatarProfileProps> = ({
     64: "h-64 w-64",
     72: "h-72 w-72",
     96: "h-96 w-96",
-    120: "h-[120px] w-[120px]",
+    120: "h-120 w-120",
   };
   const shapeMap = {
     circle: "rounded-full",
@@ -41,9 +41,9 @@ const AvatarProfile: FC<AvatarProfileProps> = ({
         <div
           style={{ zIndex: index,
             left: index * size/2,
-            mask:avatars.length - 1 !== index
-              ? `radial-gradient(circle at ${size - Math.min(size/16 , 5)}px, transparent ${size/2 }px, white 0)`
-              : "",}}
+            mask:avatars.length - 1 !== index && shape === "circle"?
+              `radial-gradient(circle at ${size - Math.min(size/16 , 5)}px, transparent ${size/2 }px, white 0)`:
+              "",}}
           className={cn(
             sizeMap[size],
             shapeMap[shape],
@@ -65,7 +65,7 @@ const AvatarProfile: FC<AvatarProfileProps> = ({
       ))}
       {avatars.length > 3 && (
         <div
-          style={{ left: 60 }}
+          style={{ left: 3 * size/2,}}
           className={cn(
             "absolute z-50 top-0 overflow-hidden flex p-0 bg-success-500 justify-center items-center",
             sizeMap[size],
