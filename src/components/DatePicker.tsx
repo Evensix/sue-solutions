@@ -22,7 +22,7 @@ export function DatePicker<T extends DateValue>({  ...props }: DatePickerProps<T
 				<DateInput className="min-w-[150px] flex-1 px-8 py-6 text-sm" />
 			</FieldGroup>
 			<Button variant="icon" className="ml-10 w-44 rounded-4 outline-offset-0">
-				<CalendarIcon aria-hidden className="h-16 w-16" />
+				<CalendarIcon aria-hidden className="h-16 w-40" />
 			</Button>
 			<Popover>
 				<Dialog>

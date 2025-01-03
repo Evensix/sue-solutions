@@ -42,7 +42,7 @@ const segmentStyles = tv({
       true: "text-neutral-200 dark:text-secondary-600 forced-colors:text-[GrayText]",
     },
     isFocused: {
-      true: "bg-purple-600 text-white dark:text-white forced-colors:bg-[Highlight] forced-colors:text-[HighlightText]",
+      true: "border-neutral-900 dark:border-white forced-colors:bg-[Highlight] forced-colors:text-[HighlightText]",
     },
   },
 });
